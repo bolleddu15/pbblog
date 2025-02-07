@@ -58,10 +58,12 @@
       align-items: center;
       gap: 20px;
       padding: 20px;
+      /* Removed overflow:hidden to avoid clipping the image */
     }
     #home-section img {
       width: 180px;
-      height: auto;
+      height: 180px;  /* Make height equal to width for a perfect circle */
+      object-fit: cover;
       border-radius: 50%;
       border: 3px solid white;
     }
@@ -104,17 +106,20 @@
 
     /* Footer styling */
     .footer {
-      text-align: center;
-      padding: 0px;
+      display: flex;               /* Use Flexbox */
+      justify-content: center;       /* Center the icons horizontally */
+      align-items: center;           /* Align items vertically */
+      gap: 20px;                     /* Add space between icons */
+      padding: 10px 0;
       background: none;
       border: none;
       box-shadow: none;
     }
     .footer a {
-      margin: 0px;
+      margin: 0;
     }
     .footer img {
-      width: 20px;
+      width: 30px;                  /* Slightly larger for better visibility */
       height: auto;
     }
 
@@ -143,15 +148,14 @@
       <div style="position: fixed; top: 10px; right: 10px; font-size: small; font-style: italic; font-weight: bold; z-index: 9999;">
         🚧 Website is updating everyday 🚧
       </div>
-      <div id="home-section" style="display: flex; align-items: center; gap: 20px; overflow: hidden;">
+      <div id="home-section">
         <!-- Left side: Personal Image as a circle -->
         <img 
-          src="https://github.com/bolleddu15/pradeepb-blog/blob/main/my%20image.jpeg?raw=true" 
-          alt="Pradeep Bolleddu" 
-          style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; z-index: 2;"
+          src="https://raw.githubusercontent.com/bolleddu15/pradeepb-blog/main/my%20image.jpeg" 
+          alt="Pradeep Bolleddu"
         >
         <!-- Right side: Welcome Text and Intro Description -->
-        <div class="welcome-text" style="z-index: 2;">
+        <div class="welcome-text">
           <h1>Welcome</h1>
           <p>
             Welcome to My Portfolio <br />
@@ -187,7 +191,7 @@
         </li>
         <li>
           <a href="#/projects/healthcare-classification" class="project-link" data-project="project4">
-            Biomedical Image Analysis with Multi-Panel Classification Standards, [CNN]Federated Learning Deployment in Radiology.
+            Biomedical Image Analysis with Multi-Panel Classification Standards, [CNN] Federated Learning Deployment in Radiology.
           </a>
         </li>
       </ul>
