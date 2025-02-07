@@ -48,7 +48,7 @@ nav a {
 
 nav a:focus {
   outline: none; /* Ensures no outline on focus */
-  box-shadow: none; /* Removes any potential box shadow */
+  box-shadow: 0 0 0 2px white; /* Adds white outline instead of black */
 }
 
 nav a:hover {
