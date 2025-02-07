@@ -1,46 +1,129 @@
-/* styles.css */
+/* Advanced CSS Styling */
 
-/* General body styling */
+/* Apply smooth scrolling for better navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body styling with a gradient background and subtle shadow */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f4f4f9, #e6e6ff);
   color: #333;
   margin: 0;
   padding: 0;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Header styling */
+/* Header with animated text shadow */
 h1 {
   text-align: center;
   color: #4a90e2;
   margin-top: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in-out;
 }
 
-/* Navigation bar styling */
+/* Navigation bar with hover effects */
 nav {
   background-color: #333;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0 20px;
   font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
   color: #4a90e2;
+  transform: scale(1.1);
 }
 
-/* Footer styling */
+/* Card-style content section */
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive typography */
+h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #333;
+}
+
+/* Footer with gradient and hover effects */
 footer {
-  background-color: #333;
+  background: linear-gradient(135deg, #333, #444);
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   position: fixed;
   bottom: 0;
   width: 100%;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #4a90e2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
 }
