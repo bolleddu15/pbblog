@@ -43,8 +43,13 @@ nav a {
   font-size: 1.1em;
   transition: color 0.3s ease, transform 0.3s ease;
   outline: none;  /* Removes the black outline when clicked */
+  -webkit-tap-highlight-color: transparent; /* Removes the highlight on mobile devices */
 }
 
+nav a:focus {
+  outline: none; /* Ensures no outline on focus */
+  box-shadow: none; /* Removes any potential box shadow */
+}
 
 nav a:hover {
   color: #4a90e2;
