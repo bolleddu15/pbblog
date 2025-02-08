@@ -26,17 +26,18 @@ h1 {
 
 /* Navigation bar with hover effects */
 nav {
-  background-color: transparent; /* Removed black color */
+  background-color: transparent;
   padding: 15px;
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: none; /* Removed box shadow */
+  border: none; /* Ensure no borders */
 }
 
 nav a {
-  color: #333; /* Changed to match text color */
+  color: #333;
   text-decoration: none;
   margin: 0 20px;
   font-weight: bold;
@@ -48,7 +49,8 @@ nav a {
 
 nav a:focus {
   outline: none; /* Ensures no outline on focus */
-  box-shadow: 0 0 0 2px #4a90e2; /* Adds a soft blue outline instead */
+  box-shadow: none; /* Removed focus box shadow */
+  border: none; /* Removed border on focus */
 }
 
 nav a:hover {
@@ -133,4 +135,4 @@ footer a:hover {
   footer {
     font-size: 0.8em;
   }
-} 
+}
