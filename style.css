@@ -45,9 +45,10 @@ nav a {
   transition: color 0.3s ease, transform 0.3s ease;
   outline: none;  /* Removes the black outline when clicked */
   -webkit-tap-highlight-color: transparent; /* Removes the highlight on mobile devices */
+  border: none; /* Ensure no border on tabs */
 }
 
-nav a:focus {
+nav a:focus, nav a:active {
   outline: none; /* Ensures no outline on focus */
   box-shadow: none; /* Removed focus box shadow */
   border: none; /* Removed border on focus */
