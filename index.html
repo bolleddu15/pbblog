@@ -4,16 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Pradeep Bolleddu</title>
-  bolleddu.pradeep01[at] gmail [dot] com
-  <link rel="stylesheet" href="style.css" />
   <style>
-    /* Prevent horizontal scrolling */
+    /* Global Styles */
     html, body {
       overflow-x: hidden;
       margin: 0;
       padding: 0;
+      height: 100%;
     }
-
+    
+    /* Flex layout to push footer to bottom */
+    body {
+      display: flex;
+      flex-direction: column;
+      /* Replace the URL below with your actual background image */
+      background: url('https://example.com/your-background-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    
+    main {
+      flex: 1;
+    }
+    
     /* General Tabs styling */
     .tabs__tab {
       display: none;
@@ -26,10 +38,10 @@
     .tabs__tab.active {
       display: block;
     }
-
+    
     /* Navigation styling */
     nav {
-      margin-top: 20px; /* Added margin to push the navigation down */
+      margin-top: 20px; /* Push the navigation down a bit */
     }
     nav ul {
       display: flex;
@@ -52,18 +64,17 @@
     nav ul li a.active {
       border-bottom: 2px solid #333;
     }
-
+    
     /* Home section styling: image on the left, text on the right */
     #home-section {
       display: flex;
       align-items: center;
       gap: 20px;
       padding: 20px;
-      /* Removed overflow:hidden to avoid clipping the image */
     }
     #home-section img {
       width: 180px;
-      height: 180px;  /* Make height equal to width for a perfect circle */
+      height: 180px;
       object-fit: cover;
       border-radius: 50%;
       border: 3px solid white;
@@ -74,7 +85,7 @@
     #home-section h1 {
       margin-top: 0;
     }
-
+    
     /* Projects, Publications, and Stories list styling */
     #projects-list,
     #publications-list,
@@ -88,7 +99,6 @@
     #stories-list li {
       margin-bottom: 15px;
     }
-    /* Styling for project/publication/story links to appear as plain text */
     .project-link,
     .publication-link,
     .story-link {
@@ -97,14 +107,12 @@
       text-decoration: none;
       cursor: pointer;
     }
-
-    /* Project/Publication description styling */
     #project-content p,
     #publication-content p {
       font-family: 'Georgia', serif;
       font-size: 18px;
     }
-
+    
     /* Thought Section styling */
     .thought-section {
       text-align: center;
@@ -121,53 +129,68 @@
       font-style: italic;
       color: #555;
     }
-
+    
     /* Footer styling */
     .footer {
-      display: flex;               /* Use Flexbox */
-      justify-content: center;     /* Center the icons horizontally */
-      align-items: center;         /* Align items vertically */
-      gap: 20px;                   /* Add space between icons */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
       padding: 10px 0;
-      background: none;
-      border: none;
-      box-shadow: none;
+      /* Nearly solid footer to minimize background transparency */
+      background-color: rgba(255, 255, 255, 0.95);
+      margin: 0;
     }
     .footer a {
       margin: 0;
     }
     .footer img {
-      width: 30px;                  /* Slightly larger for better visibility */
+      width: 30px;
       height: auto;
     }
-
-    /* Smooth fade in for the introductory text */
+    
     @keyframes fadeIn {
       0% { opacity: 0; }
       100% { opacity: 1; }
+    }
+    
+    /* Mobile Responsive Styles */
+    @media only screen and (max-width: 600px) {
+      /* Stack home section vertically */
+      #home-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      #home-section img {
+        width: 120px;
+        height: 120px;
+      }
+      /* Stack navigation items vertically for better tap targets */
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
     <ul>
-      <!-- Updated links with hash-based routing -->
       <li><a href="#/" class="tab-link" data-tab="tab_1">Home</a></li>
       <li><a href="#/projects" class="tab-link" data-tab="tab_2">Projects</a></li>
       <li><a href="#/publications" class="tab-link" data-tab="tab_3">Publications</a></li>
       <li><a href="#/stories" class="tab-link" data-tab="tab_4">Data Science Stories</a></li>
     </ul>
   </nav>
-
+  
   <main>
     <!-- Home Section -->
     <section class="tabs__tab active" id="tab_1" style="position: relative;">
-      <!-- Under Construction Notice -->
       <div style="position: fixed; top: 10px; right: 10px; font-size: small; font-style: italic; font-weight: bold; z-index: 9999;">
         🚧 Website is updating everyday 🚧
       </div>
       <div id="home-section">
-        <!-- Right side: Welcome Text and Intro Description -->
         <div class="welcome-text">
           <h1>Welcome</h1>
           <p>
@@ -175,14 +198,13 @@
             "IDK! What to put here? Hi! I'm Pradeep Bolleddu! A Master’s graduate in Data Science and AI. I’m passionate about exploring the intersection of Big Data and AI to solve real-world problems.
             This space is where I share my thoughts, insights, and stories I've learned along the way."
           </p>
-          <!-- Intro Text in Italics with Smooth Transition -->
           <p style="font-style: italic; opacity: 0; animation: fadeIn 2s forwards 1s;">
             With a Master's degree in Data Science and AI! From building models to solving real-world problems, I've honed my skills in AI, machine learning, and big data analytics—not just to analyze data.
           </p>
         </div>
       </div>
     </section>
-
+    
     <!-- Projects Section -->
     <section class="tabs__tab" id="tab_2">
       <h1>Projects</h1>
@@ -209,14 +231,14 @@
         </li>
       </ul>
     </section>
-
+    
     <!-- Project Details Section -->
     <section class="tabs__tab" id="tab_project">
       <div id="project-content">
         <!-- Project details will be loaded here dynamically -->
       </div>
     </section>
-
+    
     <!-- Publications Section -->
     <section class="tabs__tab" id="tab_3">
       <h1>Publications</h1>
@@ -243,13 +265,13 @@
         </li>
       </ul>
     </section>
-
+    
     <!-- Publication Details Section -->
     <section class="tabs__tab" id="tab_publication">
       <div id="publication-content"></div>
     </section>
-
-    <!-- Data Science Stories List Section -->
+    
+    <!-- Data Science Stories Section -->
     <section class="tabs__tab" id="tab_4">
       <h1>Data Science Stories</h1>
       <ul id="stories-list">
@@ -270,7 +292,7 @@
         </li>
       </ul>
     </section>
-
+    
     <!-- Data Science Story Details Section -->
     <section class="tabs__tab" id="tab_story">
       <div id="story-content">
@@ -278,13 +300,13 @@
       </div>
     </section>
   </main>
-
+  
   <!-- Thought Section -->
   <section class="thought-section">
     <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/Screenshot%20(42).png" alt="Thought Image" />
     <p>you become what you believe today! Its a Decision that you decide.</p>
   </section>
-
+  
   <!-- Footer -->
   <div class="footer">
     <a href="https://www.linkedin.com/in/pradeep-pb-bolleddu-4745991b2/" target="_blank" aria-label="LinkedIn">
@@ -300,7 +322,7 @@
       <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
     </a>
   </div>
-
+  
   <script src="script.js"></script>
 </body>
 </html>
