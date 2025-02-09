@@ -409,11 +409,11 @@ document.addEventListener("DOMContentLoaded", () => {
     setActiveTab("tab_publication");
   }
 
-  // Function to load Data Science Story details with background images
-  function loadStory(storyId) {
-    const storyData = {
-      "story1": {
-        "content": `
+// Function to load Data Science Story details with background images
+function loadStory(storyId) {
+  const storyData = {
+    "story1": {
+      "content": `
         <div style="font-family: 'Georgia', serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px;">
           <h2 style="text-align:center; margin-bottom: 20px;">Whispering with Siri and the Language of Data</h2>
           <p>The genesis of Siri was more than a technological challenge—it was about teaching machines to understand us. At the heart of this transformation was a blend of Natural Language Processing (NLP) techniques and innovative algorithms:</p>
@@ -449,10 +449,10 @@ document.addEventListener("DOMContentLoaded", () => {
           </ul>
         </div>
       `,
-        "background": "url('https://raw.githubusercontent.com/bolleddu15/pradeepb-blog/main/apple%20image.jpg')"
-      },
-      "story2": {
-        "content": `
+      "background": "url('https://raw.githubusercontent.com/bolleddu15/pradeepb-blog/main/apple%20image.jpg')"
+    },
+    "story2": {
+      "content": `
         <div style="font-family: 'Georgia', serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px;">
           <h2 style="text-align:center; margin-bottom: 20px;">Google</h2>
           <p>Let me tell you a story—one that starts in the late 90s, when the internet was a sprawling mess of information. In 1998, Google was more of a hope than a reality.</p>
@@ -463,15 +463,12 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>I remember the early days of Google Translate—I was there. It was a challenge, and it was exciting. Statistical machine translation didn’t work as well as we hoped. Languages don’t work in predictable ways, and simply matching words from one language to another wasn’t enough. So we turned to neural networks—this was the beginning of deep learning, the algorithm that would change everything.</p>
           <p>The breakthrough moment came when we began applying deep learning to Google Photos. It was using computer vision to understand the context of images. You could search for “beach” and instantly get all the photos you took during summer vacations, even though you never labeled them. This was made possible by algorithms like <strong>Convolutional Neural Networks (CNNs)</strong>, which are designed to work on image data.</p>
           <p>Training these models wasn’t a walk in the park. Deep learning models are notoriously computationally expensive. It took months of fine-tuning, sometimes hundreds of GPUs, and at times, we even had to build custom chips (yes, TPUs—Tensor Processing Units) just to speed up training. The real magic of Google wasn’t just that we had access to all this data; it was that we built tools and algorithms that allowed us to make sense of it, fast.</p>
-          <p><strong>Google Assistant</strong> was another product where data science played a pivotal role. The goal wasn’t just to make a voice assistant that responded to commands but one that could actually understand you, learn from your preferences, and predict what you needed before you asked. The algorithm that powered this was a combination of natural language processing (NLP) and reinforcement learning, where the more you interacted with Assistant, the better it got at predicting your next question, action, or task. There was a lot of trial and error in the early stages, especially with voice recognition—think about how many accents and dialects people have. But with each failure, we learned something new, and with each iteration, Google Assistant became smarter.</p>
-          <p>In the last few years, we've seen a massive shift. Algorithms have gone from being a tool to shaping our products. Take <strong>Google Maps</strong>, for example. When we first launched it, we simply had maps, but now, it predicts traffic, suggests alternate routes, and even tells you the best time to leave for your destination. It can even predict your arrival time based on real-time data, including historical patterns.</p>
-          <p>The complexity of the data that powers products like Google Ads and Google Cloud is mind-boggling. As the world moved to the cloud, Google had to make sure its machine learning models were scalable and efficient. This led to the creation of tools like <strong>TensorFlow</strong> and <strong>Kubernetes</strong>, which revolutionized how models were deployed in production. TensorFlow allowed us to build models, and Kubernetes let us manage them at scale. It wasn’t just about writing a model anymore—it was about operationalizing machine learning in real-world applications.</p>
         </div>
       `,
-        "background": "url('https://raw.githubusercontent.com/bolleddu15/pradeepb-blog/main/googl.png')"
-      },
-      "story3": {
-        "content": `
+      "background": "url('https://raw.githubusercontent.com/bolleddu15/pradeepb-blog/main/googl.png')"
+    },
+    "story3": {
+      "content": `
         <div style="font-family: 'Georgia', serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px;">
           <h2 style="text-align:center; margin-bottom: 20px;">OPEN AI</h2>
           <h3>How GPT-3 Became a Revolutionary Language Model</h3>
@@ -488,29 +485,28 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>GPT-4 was more than just a larger model; it was a fundamentally more capable one. With a better grasp of subtle nuances, GPT-4’s ability to understand complex instructions, reason logically, and generate human-like responses made it a tool that pushed boundaries in fields like healthcare, law, and content creation. What was truly impressive was how GPT-4 managed to take even the most sophisticated queries and provide responses that were grounded in factual accuracy and context.</p>
         </div>
       `,
-        "background": "url('https://raw.githubusercontent.com/bolleddu15/pradeepb-blog/main/open%20ai.png')"
-      }
-    };
-
-    if (storyData[storyId]) {
-      storyContent.innerHTML = storyData[storyId].content;
-      // Reset body background
-      document.body.style.backgroundImage = "";
-      document.body.style.backgroundColor = "#f0f0f0";
-      // Apply background to the story container
-      storyContent.style.backgroundImage = storyData[storyId].background;
-      storyContent.style.backgroundSize = "cover";
-      storyContent.style.backgroundPosition = "center";
-      storyContent.style.backgroundAttachment = "fixed";
-      storyContent.style.padding = "20px";
-      storyContent.style.borderRadius = "10px";
-      storyContent.style.color = "white";
-    } else {
-      storyContent.innerHTML = "<p>Story not found.</p>";
+      "background": "url('https://raw.githubusercontent.com/bolleddu15/pradeepb-blog/main/open%20ai.png')"
     }
-    setActiveTab("tab_story");
-  }
+  };
 
+  if (storyData[storyId]) {
+    storyContent.innerHTML = storyData[storyId].content;
+    // Reset body background
+    document.body.style.backgroundImage = "";
+    document.body.style.backgroundColor = "#f0f0f0";
+    // Apply a white linear-gradient overlay with the background image to make it very light
+    storyContent.style.backgroundImage = "linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8))," + storyData[storyId].background;
+    storyContent.style.backgroundSize = "cover";
+    storyContent.style.backgroundPosition = "center";
+    storyContent.style.backgroundAttachment = "fixed";
+    storyContent.style.padding = "20px";
+    storyContent.style.borderRadius = "10px";
+    storyContent.style.color = "black";
+  } else {
+    storyContent.innerHTML = "<p>Story not found.</p>";
+  }
+  setActiveTab("tab_story");
+}
   // Listen for clicks on main navigation links
   document.querySelectorAll(".tab-link").forEach(link => {
     link.addEventListener("click", event => {
