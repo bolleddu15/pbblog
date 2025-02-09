@@ -3,73 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Pradeep Bolleddu</title>
+  <title>Responsive Website</title>
   <style>
     /* Global Styles */
     html, body {
-      overflow-x: hidden;
       margin: 0;
       padding: 0;
       height: 100%;
+      overflow-x: hidden;
     }
-    
-    /* Flex layout to push footer to bottom */
+
+    /* Background Image with Transparency */
     body {
+      position: relative;
       display: flex;
       flex-direction: column;
-      /* Replace the URL below with your actual background image */
+      min-height: 100vh;
       background: url('https://example.com/your-background-image.jpg') no-repeat center center fixed;
       background-size: cover;
     }
-    
-    main {
-      flex: 1;
-    }
-    
-    /* General Tabs styling */
-    .tabs__tab {
-      display: none;
+
+    /* Transparent Overlay */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      min-height: 100vh;
-      padding: 20px;
-      box-sizing: border-box;
-      overflow-y: auto;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9); /* Adjust transparency here */
+      z-index: -1;
     }
-    .tabs__tab.active {
-      display: block;
+
+    main {
+      flex: 1; /* Push footer to the bottom */
     }
-    
-    /* Navigation styling */
+
+    /* Navigation Styling */
     nav {
-      margin-top: 20px; /* Push the navigation down a bit */
+      margin-top: 20px;
     }
     nav ul {
       display: flex;
       justify-content: center;
-      list-style: none;
+      list-style-type: none;
       padding: 0;
       margin: 0;
     }
     nav ul li {
-      margin: 0 8px;
+      margin: 0 10px;
     }
     nav ul li a {
       text-decoration: none;
       font-size: 18px;
       color: #333;
       padding: 8px 12px;
-      transition: border-bottom 0.3s;
+      transition: border-bottom 0.3s ease-in-out;
     }
-    /* Underline effect for active tab */
     nav ul li a.active {
       border-bottom: 2px solid #333;
     }
-    
-    /* Home section styling: image on the left, text on the right */
+
+    /* Home Section Styling */
     #home-section {
       display: flex;
       align-items: center;
-      gap: 20px;
+      justify-content: center;
       padding: 20px;
     }
     #home-section img {
@@ -81,248 +80,25 @@
     }
     #home-section .welcome-text {
       max-width: 600px;
-    }
-    #home-section h1 {
-      margin-top: 0;
-    }
-    
-    /* Projects, Publications, and Stories list styling */
-    #projects-list,
-    #publications-list,
-    #stories-list {
-      list-style: none;
-      padding: 0;
       text-align: left;
     }
-    #projects-list li,
-    #publications-list li,
-    #stories-list li {
-      margin-bottom: 15px;
-    }
-    .project-link,
-    .publication-link,
-    .story-link {
-      font-size: 24px;
-      color: inherit;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    #project-content p,
-    #publication-content p {
-      font-family: 'Georgia', serif;
-      font-size: 18px;
-    }
-    
-    /* Thought Section styling */
-    .thought-section {
-      text-align: center;
-      margin: 40px 0;
-      padding: 20px;
-    }
-    .thought-section img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 15px;
-    }
-    .thought-section p {
-      font-size: 18px;
-      font-style: italic;
-      color: #555;
-    }
-    
-    /* Footer styling */
+
+    /* Footer Styling */
     .footer {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 20px;
       padding: 10px 0;
-      /* Nearly solid footer to minimize background transparency */
       background-color: rgba(255, 255, 255, 0.95);
-      margin: 0;
-    }
-    .footer a {
-      margin: 0;
     }
     .footer img {
-      width: 30px;
-      height: auto;
+      width: 30px; /* Icon size */
     }
-    
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    
-    /* Mobile Responsive Styles */
+
+    /* Responsive Styling for Consistent Horizontal Tabs */
     @media only screen and (max-width: 600px) {
-      /* Stack home section vertically */
-      #home-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      #home-section img {
-        width: 120px;
-        height: 120px;
-      }
-      /* Stack navigation items vertically for better tap targets */
       nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <ul>
-      <li><a href="#/" class="tab-link" data-tab="tab_1">Home</a></li>
-      <li><a href="#/projects" class="tab-link" data-tab="tab_2">Projects</a></li>
-      <li><a href="#/publications" class="tab-link" data-tab="tab_3">Publications</a></li>
-      <li><a href="#/stories" class="tab-link" data-tab="tab_4">Data Science Stories</a></li>
-    </ul>
-  </nav>
-  
-  <main>
-    <!-- Home Section -->
-    <section class="tabs__tab active" id="tab_1" style="position: relative;">
-      <div style="position: fixed; top: 10px; right: 10px; font-size: small; font-style: italic; font-weight: bold; z-index: 9999;">
-        🚧 Website is updating everyday 🚧
-      </div>
-      <div id="home-section">
-        <div class="welcome-text">
-          <h1>Welcome</h1>
-          <p>
-            Welcome to My Portfolio <br />
-            "IDK! What to put here? Hi! I'm Pradeep Bolleddu! A Master’s graduate in Data Science and AI. I’m passionate about exploring the intersection of Big Data and AI to solve real-world problems.
-            This space is where I share my thoughts, insights, and stories I've learned along the way."
-          </p>
-          <p style="font-style: italic; opacity: 0; animation: fadeIn 2s forwards 1s;">
-            With a Master's degree in Data Science and AI! From building models to solving real-world problems, I've honed my skills in AI, machine learning, and big data analytics—not just to analyze data.
-          </p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Projects Section -->
-    <section class="tabs__tab" id="tab_2">
-      <h1>Projects</h1>
-      <ul id="projects-list">
-        <li>
-          <a href="#/projects/predictive-maintenance" class="project-link" data-project="project1">
-            Investigation of Bias in the Multimodal Analysis of Financial Earnings Calls.
-          </a>
-        </li>
-        <li>
-          <a href="#/projects/customer-segmentation" class="project-link" data-project="project2">
-            Customer/ Technographic Segmentation Models with RFM & Behavioral Analysis for Marketing Optimization.
-          </a>
-        </li>
-        <li>
-          <a href="#/projects/academic-chatbot" class="project-link" data-project="project3">
-            LangChain-Neo4j Architecture for Healthcare Chatbots with RAG systems and NLP.
-          </a>
-        </li>
-        <li>
-          <a href="#/projects/healthcare-classification" class="project-link" data-project="project4">
-            Biomedical Image Analysis with Multi-Panel Classification Standards, [CNN] Federated Learning Deployment in Radiology.
-          </a>
-        </li>
-      </ul>
-    </section>
-    
-    <!-- Project Details Section -->
-    <section class="tabs__tab" id="tab_project">
-      <div id="project-content">
-        <!-- Project details will be loaded here dynamically -->
-      </div>
-    </section>
-    
-    <!-- Publications Section -->
-    <section class="tabs__tab" id="tab_3">
-      <h1>Publications</h1>
-      <ul id="publications-list">
-        <li>
-          <a href="#/publications/An%20Analysis%20of%20Clustering%20Techniques" class="publication-link" data-publication="pub1">
-            An Analysis of Clustering Techniques.
-          </a>
-        </li>
-        <li>
-          <a href="#/publications/Hadoop:%20An%20Overview%20of%20Data%20Security" class="publication-link" data-publication="pub2">
-            Hadoop: An Overview of Data Security.
-          </a>
-        </li>
-        <li>
-          <a href="#/publications/Neuro-Symbolic%20Large%20Action%20Models:%20A%20Unified%20Theoretical%20Framework%20for%20Generalizable%20AI%20Across%20Vision,%20Language,%20and%20Robotics" class="publication-link" data-publication="pub3">
-            Neuro-Symbolic Large Action Models: A Unified Theoretical Framework for Generalizable AI Across Vision, Language, and Robotics.
-          </a>
-        </li>
-        <li>
-          <a href="#/publications/Self-Sustaining%20Artificial%20Generative%20Systems:%20Exploring%20Autonomous%20Meta-Learning%20and%20Cross-Domain%20Knowledge%20Fusion" class="publication-link" data-publication="pub4">
-            Self-Sustaining Artificial Generative Systems: Exploring Autonomous Meta-Learning and Cross-Domain Knowledge Fusion.
-          </a>
-        </li>
-      </ul>
-    </section>
-    
-    <!-- Publication Details Section -->
-    <section class="tabs__tab" id="tab_publication">
-      <div id="publication-content"></div>
-    </section>
-    
-    <!-- Data Science Stories Section -->
-    <section class="tabs__tab" id="tab_4">
-      <h1>Data Science Stories</h1>
-      <ul id="stories-list">
-        <li>
-          <a href="#/stories/story1" class="story-link" data-story="story1">
-            The Secret Data Behind Apple’s Innovation
-          </a>
-        </li>
-        <li>
-          <a href="#/stories/story2" class="story-link" data-story="story2">
-            The Hidden World of AI at Google
-          </a>
-        </li>
-        <li>
-          <a href="#/stories/story3" class="story-link" data-story="story3">
-            How OpenAI is Paving the Way for a New Age of Intelligence?
-          </a>
-        </li>
-      </ul>
-    </section>
-    
-    <!-- Data Science Story Details Section -->
-    <section class="tabs__tab" id="tab_story">
-      <div id="story-content">
-        <!-- Story details will be loaded here dynamically -->
-      </div>
-    </section>
-  </main>
-  
-  <!-- Thought Section -->
-  <section class="thought-section">
-    <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/Screenshot%20(42).png" alt="Thought Image" />
-    <p>you become what you believe today! Its a Decision that you decide.</p>
-  </section>
-  
-  <!-- Footer -->
-  <div class="footer">
-    <a href="https://www.linkedin.com/in/pradeep-pb-bolleddu-4745991b2/" target="_blank" aria-label="LinkedIn">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
-    </a>
-    <a href="https://drive.google.com/drive/u/0/folders/1ewEaWEa7U8c3zIGViDykpwPl-1hnQ1Jz" target="_blank" aria-label="Resume">
-      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Resume" />
-    </a>
-    <a href="https://github.com/bolleddu15" target="_blank" aria-label="GitHub">
-      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
-    </a>
-    <a href="mailto:bolleddu.pradeep01@gmail.com" aria-label="Email">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
-    </a>
-  </div>
-  
-  <script src="script.js"></script>
-</body>
-</html>
+        flex-wrap: nowrap; /* Prevent stacking on mobile */
+        overflow-x:auto; /* Allow horizontal scrolling if needed */
+        white-space:no-wrap; 
