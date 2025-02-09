@@ -1,306 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Pradeep Bolleddu</title>
-  bolleddu.pradeep01[at] gmail [dot] com
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Prevent horizontal scrolling */
-    html, body {
-      overflow-x: hidden;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradeep Bolleddu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* General Tabs styling */
-    .tabs__tab {
-      display: none;
-      width: 100%;
-      min-height: 100vh;
-      padding: 20px;
-      box-sizing: border-box;
-      overflow-y: auto;
-    }
-    .tabs__tab.active {
-      display: block;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
 
-    /* Navigation styling */
-    nav {
-      margin-top: 20px; /* Added margin to push the navigation down */
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    nav ul li {
-      margin: 0 8px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      font-size: 18px;
-      color: #333;
-      padding: 8px 12px;
-      transition: border-bottom 0.3s;
-    }
-    /* Underline effect for active tab */
-    nav ul li a.active {
-      border-bottom: 2px solid #333;
-    }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+        }
 
-    /* Home section styling: image on the left, text on the right */
-    #home-section {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 20px;
-      /* Removed overflow:hidden to avoid clipping the image */
-    }
-    #home-section img {
-      width: 180px;
-      height: 180px;  /* Make height equal to width for a perfect circle */
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid white;
-    }
-    #home-section .welcome-text {
-      max-width: 600px;
-    }
-    #home-section h1 {
-      margin-top: 0;
-    }
+        header, footer {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
 
-    /* Projects, Publications, and Stories list styling */
-    #projects-list,
-    #publications-list,
-    #stories-list {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-    }
-    #projects-list li,
-    #publications-list li,
-    #stories-list li {
-      margin-bottom: 15px;
-    }
-    /* Styling for project/publication/story links to appear as plain text */
-    .project-link,
-    .publication-link,
-    .story-link {
-      font-size: 24px;
-      color: inherit;
-      text-decoration: none;
-      cursor: pointer;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-    /* Project/Publication description styling */
-    #project-content p,
-    #publication-content p {
-      font-family: 'Georgia', serif;
-      font-size: 18px;
-    }
+        nav ul li {
+            margin: 10px;
+        }
 
-    /* Thought Section styling */
-    .thought-section {
-      text-align: center;
-      margin: 40px 0;
-      padding: 20px;
-    }
-    .thought-section img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 15px;
-    }
-    .thought-section p {
-      font-size: 18px;
-      font-style: italic;
-      color: #555;
-    }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            background: #f4f4f4;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
 
-    /* Footer styling */
-    .footer {
-      display: flex;               /* Use Flexbox */
-      justify-content: center;     /* Center the icons horizontally */
-      align-items: center;         /* Align items vertically */
-      gap: 20px;                   /* Add space between icons */
-      padding: 10px 0;
-      background: none;
-      border: none;
-      box-shadow: none;
-    }
-    .footer a {
-      margin: 0;
-    }
-    .footer img {
-      width: 30px;                  /* Slightly larger for better visibility */
-      height: auto;
-    }
+        nav ul li a:hover {
+            background: #ddd;
+        }
 
-    /* Smooth fade in for the introductory text */
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-  </style>
+        .email {
+            display: inline-block;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .content {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <!-- Updated links with hash-based routing -->
-      <li><a href="#/" class="tab-link" data-tab="tab_1">Home</a></li>
-      <li><a href="#/projects" class="tab-link" data-tab="tab_2">Projects</a></li>
-      <li><a href="#/publications" class="tab-link" data-tab="tab_3">Publications</a></li>
-      <li><a href="#/stories" class="tab-link" data-tab="tab_4">Data Science Stories</a></li>
-    </ul>
-  </nav>
+    <div class="container">
+        <header>
+            <h1>Pradeep Bolleddu</h1>
+        </header>
 
-  <main>
-    <!-- Home Section -->
-    <section class="tabs__tab active" id="tab_1" style="position: relative;">
-      <!-- Under Construction Notice -->
-      <div style="position: fixed; top: 10px; right: 10px; font-size: small; font-style: italic; font-weight: bold; z-index: 9999;">
-        🚧 Website is updating everyday 🚧
-      </div>
-      <div id="home-section">
-        <!-- Right side: Welcome Text and Intro Description -->
-        <div class="welcome-text">
-          <h1>Welcome</h1>
-          <p>
-            Welcome to My Portfolio <br />
-            "IDK! What to put here? Hi! I'm Pradeep Bolleddu! A Master’s graduate in Data Science and AI. I’m passionate about exploring the intersection of Big Data and AI to solve real-world problems.
-            This space is where I share my thoughts, insights, and stories I've learned along the way."
-          </p>
-          <!-- Intro Text in Italics with Smooth Transition -->
-          <p style="font-style: italic; opacity: 0; animation: fadeIn 2s forwards 1s;">
-            With a Master's degree in Data Science and AI! From building models to solving real-world problems, I've honed my skills in AI, machine learning, and big data analytics—not just to analyze data.
-          </p>
-        </div>
-      </div>
-    </section>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-    <!-- Projects Section -->
-    <section class="tabs__tab" id="tab_2">
-      <h1>Projects</h1>
-      <ul id="projects-list">
-        <li>
-          <a href="#/projects/predictive-maintenance" class="project-link" data-project="project1">
-            Investigation of Bias in the Multimodal Analysis of Financial Earnings Calls.
-          </a>
-        </li>
-        <li>
-          <a href="#/projects/customer-segmentation" class="project-link" data-project="project2">
-            Customer/ Technographic Segmentation Models with RFM & Behavioral Analysis for Marketing Optimization.
-          </a>
-        </li>
-        <li>
-          <a href="#/projects/academic-chatbot" class="project-link" data-project="project3">
-            LangChain-Neo4j Architecture for Healthcare Chatbots with RAG systems and NLP.
-          </a>
-        </li>
-        <li>
-          <a href="#/projects/healthcare-classification" class="project-link" data-project="project4">
-            Biomedical Image Analysis with Multi-Panel Classification Standards, [CNN] Federated Learning Deployment in Radiology.
-          </a>
-        </li>
-      </ul>
-    </section>
+        <section id="about" class="content">
+            <h2>About Me</h2>
+            <p>I am passionate about data science, AI, and integrating machine learning solutions into real-world applications.</p>
+        </section>
 
-    <!-- Project Details Section -->
-    <section class="tabs__tab" id="tab_project">
-      <div id="project-content">
-        <!-- Project details will be loaded here dynamically -->
-      </div>
-    </section>
+        <section id="projects" class="content">
+            <h2>Projects</h2>
+            <p>Check out my projects on <a href="https://github.com/bolleddu15/Data-Engineering_pipelines" target="_blank">GitHub</a>.</p>
+        </section>
 
-    <!-- Publications Section -->
-    <section class="tabs__tab" id="tab_3">
-      <h1>Publications</h1>
-      <ul id="publications-list">
-        <li>
-          <a href="#/publications/An%20Analysis%20of%20Clustering%20Techniques" class="publication-link" data-publication="pub1">
-            An Analysis of Clustering Techniques.
-          </a>
-        </li>
-        <li>
-          <a href="#/publications/Hadoop:%20An%20Overview%20of%20Data%20Security" class="publication-link" data-publication="pub2">
-            Hadoop: An Overview of Data Security.
-          </a>
-        </li>
-        <li>
-          <a href="#/publications/Neuro-Symbolic%20Large%20Action%20Models:%20A%20Unified%20Theoretical%20Framework%20for%20Generalizable%20AI%20Across%20Vision,%20Language,%20and%20Robotics" class="publication-link" data-publication="pub3">
-            Neuro-Symbolic Large Action Models: A Unified Theoretical Framework for Generalizable AI Across Vision, Language, and Robotics.
-          </a>
-        </li>
-        <li>
-          <a href="#/publications/Self-Sustaining%20Artificial%20Generative%20Systems:%20Exploring%20Autonomous%20Meta-Learning%20and%20Cross-Domain%20Knowledge%20Fusion" class="publication-link" data-publication="pub4">
-            Self-Sustaining Artificial Generative Systems: Exploring Autonomous Meta-Learning and Cross-Domain Knowledge Fusion.
-          </a>
-        </li>
-      </ul>
-    </section>
+        <section id="contact" class="content">
+            <h2>Contact</h2>
+            <p>Email: <span class="email">bolleddu.pradeep01 [at] gmail [dot] com</span></p>
+        </section>
 
-    <!-- Publication Details Section -->
-    <section class="tabs__tab" id="tab_publication">
-      <div id="publication-content"></div>
-    </section>
-
-    <!-- Data Science Stories List Section -->
-    <section class="tabs__tab" id="tab_4">
-      <h1>Data Science Stories</h1>
-      <ul id="stories-list">
-        <li>
-          <a href="#/stories/story1" class="story-link" data-story="story1">
-            The Secret Data Behind Apple’s Innovation
-          </a>
-        </li>
-        <li>
-          <a href="#/stories/story2" class="story-link" data-story="story2">
-            The Hidden World of AI at Google
-          </a>
-        </li>
-        <li>
-          <a href="#/stories/story3" class="story-link" data-story="story3">
-            How OpenAI is Paving the Way for a New Age of Intelligence?
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Data Science Story Details Section -->
-    <section class="tabs__tab" id="tab_story">
-      <div id="story-content">
-        <!-- Story details will be loaded here dynamically -->
-      </div>
-    </section>
-  </main>
-
-  <!-- Thought Section -->
-  <section class="thought-section">
-    <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/Screenshot%20(42).png" alt="Thought Image" />
-    <p>you become what you believe today! Its a Decision that you decide.</p>
-  </section>
-
-  <!-- Footer -->
-  <div class="footer">
-    <a href="https://www.linkedin.com/in/pradeep-pb-bolleddu-4745991b2/" target="_blank" aria-label="LinkedIn">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
-    </a>
-    <a href="https://drive.google.com/drive/u/0/folders/1ewEaWEa7U8c3zIGViDykpwPl-1hnQ1Jz" target="_blank" aria-label="Resume">
-      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Resume" />
-    </a>
-    <a href="https://github.com/bolleddu15" target="_blank" aria-label="GitHub">
-      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
-    </a>
-    <a href="mailto:bolleddu.pradeep01@gmail.com" aria-label="Email">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
-    </a>
-  </div>
-
-  <script src="script.js"></script>
+        <footer>
+            <p>&copy; 2024 Pradeep Bolleddu. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
