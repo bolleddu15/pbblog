@@ -27,6 +27,7 @@
     
     main {
       flex: 1;
+      padding-top: 60px; /* Added padding to avoid overlap with the fixed nav */
     }
     
     /* General Tabs styling */
@@ -43,7 +44,11 @@
     
     /* Navigation styling */
     nav {
-      margin-top: 20px; /* Push the navigation down a bit */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
     }
     nav ul {
       display: flex;
@@ -210,6 +215,10 @@
           </p>
         </div>
       </div>
+      <!-- Thought Section (Visible only on Home) -->
+      <section class="thought-section">
+        <p>you become what you believe today! Its a Decision that you decide.</p>
+      </section>
     </section>
 
     <!-- Projects Section -->
@@ -307,11 +316,6 @@
       </div>
     </section>
   </main>
-
-  <!-- Thought Section -->
-  <section class="thought-section">
-    <p>you become what you believe today! Its a Decision that you decide.</p>
-  </section>
 
   <!-- Footer -->
   <div class="footer">
