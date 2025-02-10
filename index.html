@@ -6,6 +6,8 @@
   bolleddu.pradeep01 [at] gmail[.] com 
   <title>Home | Pradeep Bolleddu</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Google Font for Thought Section -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <style>
     /* Reset default spacing and prevent horizontal scrolling */
     html, body {
@@ -27,7 +29,7 @@
     
     main {
       flex: 1;
-      padding-top: 60px; /* Added padding to avoid overlap with the fixed nav */
+      padding-top: 60px; /* Padding to avoid content hiding behind fixed nav */
     }
     
     /* General Tabs styling */
@@ -58,6 +60,7 @@
       margin: 0;
       flex-wrap: nowrap;
       overflow-x: auto;
+      background: transparent; /* No extra box styling */
     }
     nav ul li {
       margin: 0 8px;
@@ -112,8 +115,7 @@
       bottom: 0;
       background: url('https://raw.githubusercontent.com/bolleddu15/pbblog/main/Screenshot%20(42).png') no-repeat center center;
       background-size: cover;
-      /* Decreased opacity for a more subtle effect */
-      opacity: 0.5;
+      opacity: 1; /* Fully visible background image */
       z-index: -1;
     }
     
@@ -150,15 +152,13 @@
       margin: 40px 0;
       padding: 20px;
     }
-    .thought-section img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 15px;
-    }
     .thought-section p {
-      font-size: 18px;
-      font-style: italic;
-      color: #555;
+      font-family: 'Lobster', cursive;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #333;
+      text-transform: uppercase;
+      margin: 0;
     }
     
     /* Footer styling – no extra space between body and footer */
@@ -217,7 +217,7 @@
       </div>
       <!-- Thought Section (Visible only on Home) -->
       <section class="thought-section">
-        <p>you become what you believe today! Its a Decision that you decide.</p>
+        <p>YOU BECOME WHAT YOU BELIEVE TODAY! ITS A DECISION THAT YOU DECIDE</p>
       </section>
     </section>
 
