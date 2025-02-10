@@ -415,7 +415,7 @@ const storyContent = document.getElementById('storyContent');
 function loadStory(storyId) {
   const storyData = {
     "story1": {
-      "content": `
+      "content": 
       <div style="font-family: 'Georgia', serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px;">
         <h2 style="text-align:center; margin-bottom: 20px;">Whispering with Siri and the Language of Data</h2>
         <p>The genesis of Siri was more than a technological challenge—it was about teaching machines to understand us. At the heart of this transformation was a blend of Natural Language Processing (NLP) techniques and innovative algorithms:</p>
@@ -450,10 +450,10 @@ function loadStory(storyId) {
           <li><strong>Differential Privacy:</strong> This statistical technique allowed us to analyze large datasets while obscuring the details of any individual entry, balancing the need for data insights with the sanctity of personal information.</li>
         </ul>
       </div>
-      `
+      
     },
     "story2": {
-      "content": `
+      "content": 
       <div style="font-family: 'Georgia', serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px;">
         <h2 style="text-align:center; margin-bottom: 20px;">Google</h2>
         <p>Let me tell you a story—one that starts in the late 90s, when the internet was a sprawling mess of information. In 1998, Google was more of a hope than a reality.</p>
@@ -465,10 +465,10 @@ function loadStory(storyId) {
         <p>The breakthrough moment came when we began applying deep learning to Google Photos. It was using computer vision to understand the context of images. You could search for “beach” and instantly get all the photos you took during summer vacations, even though you never labeled them. This was made possible by algorithms like <strong>Convolutional Neural Networks (CNNs)</strong>, which are designed to work on image data.</p>
         <p>Training these models wasn’t a walk in the park. Deep learning models are notoriously computationally expensive. It took months of fine-tuning, sometimes hundreds of GPUs, and at times, we even had to build custom chips (yes, TPUs—Tensor Processing Units) just to speed up training. The real magic of Google wasn’t just that we had access to all this data; it was that we built tools and algorithms that allowed us to make sense of it, fast.</p>
       </div>
-      `
+      
     },
     "story3": {
-      "content": `
+      "content": 
       <div style="font-family: 'Georgia', serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px;">
         <h2 style="text-align:center; margin-bottom: 20px;">OPEN AI</h2>
         <h3>How GPT-3 Became a Revolutionary Language Model</h3>
@@ -484,48 +484,24 @@ function loadStory(storyId) {
         <h3 style="margin-top: 40px;">GPT-4—The Next Generation of AI Understanding</h3>
         <p>GPT-4 was more than just a larger model; it was a fundamentally more capable one. With a better grasp of subtle nuances, GPT-4’s ability to understand complex instructions, reason logically, and generate human-like responses made it a tool that pushed boundaries in fields like healthcare, law, and content creation. What was truly impressive was how GPT-4 managed to take even the most sophisticated queries and provide responses that were grounded in factual accuracy and context.</p>
       </div>
-      `
+      
     }
   };
 
   if (storyData[storyId]) {
-    // Set the story HTML content
     storyContent.innerHTML = storyData[storyId].content;
-    
     // Reset body background
     document.body.style.backgroundImage = "";
     document.body.style.backgroundColor = "#f0f0f0";
-    
-    // Select the proper background image URL based on the story ID
-    let bgUrl = "";
-    if (storyId === "story1") {
-      bgUrl = "https://raw.githubusercontent.com/bolleddu15/pbblog/main/a.jpg";
-    } else if (storyId === "story2") {
-      bgUrl = "https://raw.githubusercontent.com/bolleddu15/pbblog/main/g.png";
-    } else if (storyId === "story3") {
-      bgUrl = "https://raw.githubusercontent.com/bolleddu15/pbblog/main/o.jpg";
-    }
-    
-    // Apply the background image with a white overlay at 90% opacity,
-    // making the image very lightly visible behind the content.
-    storyContent.style.background = `
-      linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
-      url('${bgUrl}')
-    `;
-    storyContent.style.backgroundSize = "cover";
-    storyContent.style.backgroundPosition = "center";
-    storyContent.style.backgroundRepeat = "no-repeat";
-    
-    // Additional styling for the content container
+    // Remove any background image from the story container and apply a plain background color
+    storyContent.style.backgroundImage = "";
+    storyContent.style.backgroundColor = "#ffffff";
     storyContent.style.padding = "20px";
     storyContent.style.borderRadius = "10px";
     storyContent.style.color = "black";
-    storyContent.style.minHeight = "500px"; // Ensures the background is visible even if content is short
   } else {
     storyContent.innerHTML = "<p>Story not found.</p>";
   }
-  
-  // (Optional) Update active tab or other UI elements
   setActiveTab("tab_story");
 }
 
