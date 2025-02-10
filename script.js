@@ -416,39 +416,87 @@ function loadStory(storyId) {
   const storyData = {
     "story1": {
       "content": `
-      <div style="font-family: 'Georgia', serif; line-height: 1.6; max-width: 800px; margin: 40px auto;">
+      <div style="font-family: 'Georgia', serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px;">
         <h2 style="text-align:center; margin-bottom: 20px;">Whispering with Siri and the Language of Data</h2>
-        <!-- Story 1 content here -->
+        <p>The genesis of Siri was more than a technological challenge—it was about teaching machines to understand us. At the heart of this transformation was a blend of Natural Language Processing (NLP) techniques and innovative algorithms:</p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+          <li><strong>Deep Neural Networks (DNNs):</strong> These models formed the backbone of Siri’s ability to parse and understand spoken language, capturing context and nuances that a mere keyword-based system could never achieve.</li>
+          <li><strong>Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) Networks:</strong> By remembering previous parts of a conversation, these algorithms enabled Siri to maintain context, turning disjointed commands into coherent conversations.</li>
+          <li><strong>Federated Learning:</strong> This groundbreaking approach allowed us to train models across millions of devices without compromising privacy—ensuring that each interaction refined Siri’s abilities while keeping personal data secure.</li>
+        </ul>
+        <p>One morning, I tested Siri with my usual trick—asking about the weather in three different ways.</p>
+        <p style="margin: 10px 0;">
+          ❌ “Hey Siri, what’s the weather today?” (Easy.)<br>
+          ❌ “Do I need an umbrella?” (Harder.)<br>
+          ✅ “If I leave in an hour, will I get wet?” (Magic.)
+        </p>
+        <p>That moment? That was the power of data—context, prediction, and personalization—all working together invisibly.</p>
+        <h3 style="margin-top: 40px;">Capturing Light, Crafting Memories</h3>
+        <p>The iPhone camera is more than a lens; it’s a storyteller, a visionary that sees beyond the obvious. In an era when competitors were chasing megapixel counts, we turned our gaze to the future—computational photography. I vividly recall a late-night session testing a prototype camera in near darkness. The challenge was clear: capture the unseen beauty of a dimly lit cityscape without sacrificing detail.</p>
+        <p>Enter <strong>Neural Image Signal Processing (NISP)</strong>—a marvel of real-time AI. This technology merged multiple frames, adjusted exposure, balanced colors, and minimized noise, all in a heartbeat. The result was a photograph that revealed hidden layers of light and shadow, a picture that didn’t just record reality but reimagined it. That night, as I gazed at the vibrant, lifelike image, I realized we were not just taking photos—we were crafting memories.</p>
+        <h3 style="margin-top: 40px;">The Unseen Guardian of Trust</h3>
+        <p>At the core of Apple’s data revolution lies a steadfast commitment to privacy. While others might have seen data as a commodity, we regarded it as a sacred trust. Every innovation was built on a foundation of on-device processing, encryption, and anonymization. Our approach wasn’t merely technical—it was ethical. We believed that the true power of data should never come at the expense of personal freedom. This ethos of privacy-first innovation isn’t just a policy; it’s the soul of Apple.</p>
+        <p>When it comes to capturing memories, Apple’s iPhone camera transcends traditional photography. At its core is a suite of algorithms that turn light into art:</p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+          <li><strong>Convolutional Neural Networks (CNNs):</strong> These are the unsung heroes of our computational photography. CNNs analyze each pixel to enhance details, adjust lighting, and detect objects—creating images that are not just pictures, but visual narratives.</li>
+          <li><strong>Neural Image Signal Processing (NISP):</strong> By merging multiple frames using advanced deep learning techniques, NISP adjusts exposure and balances colors in real time. This process transforms a simple click into a meticulously crafted masterpiece.</li>
+          <li><strong>Clustering Algorithms:</strong> Techniques like k-means help segment images, identify patterns, and isolate features, ensuring that every photo you take is as crisp and vibrant as the memory it captures.</li>
+        </ul>
+        <h3 style="margin-top: 40px;">The Ethical Core—Data Privacy and Trust</h3>
+        <p>Amid the whirlwind of innovation, one principle remained unwavering: privacy. At Apple, data was treated not as a commodity, but as a trust to be safeguarded with cutting-edge encryption and ethical algorithms:</p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+          <li><strong>On-Device Machine Learning:</strong> By processing data locally, our models ensured that your personal information stayed secure on your device, never venturing into the cloud.</li>
+          <li><strong>Anonymization Techniques:</strong> Before any data was used for training, it was rigorously anonymized. This ensured that while our algorithms learned from patterns, they never compromised individual privacy.</li>
+          <li><strong>Differential Privacy:</strong> This statistical technique allowed us to analyze large datasets while obscuring the details of any individual entry, balancing the need for data insights with the sanctity of personal information.</li>
+        </ul>
       </div>
       `
     },
     "story2": {
       "content": `
-      <div style="font-family: 'Georgia', serif; line-height: 1.6; max-width: 800px; margin: 40px auto;">
+      <div style="font-family: 'Georgia', serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px;">
         <h2 style="text-align:center; margin-bottom: 20px;">Google</h2>
-        <!-- Story 2 content here -->
+        <p>Let me tell you a story—one that starts in the late 90s, when the internet was a sprawling mess of information. In 1998, Google was more of a hope than a reality.</p>
+        <p>But then, in the middle of all this chaos, PageRank emerged. PageRank changed everything. It didn’t just look at how many times a keyword appeared on a page. It looked at how pages were connected to each other, like a web of knowledge.</p>
+        <p>At the time, the biggest challenge wasn’t just building an algorithm—it was handling the volume. Google had data, but how could it possibly scale to accommodate all of it? Enter <strong>BigTable</strong>—a distributed storage system we built. This wasn’t your regular database. BigTable was engineered to scale to handle massive amounts of unstructured data (think millions of pages, images, user interactions, etc.).</p>
+        <p>That’s when we began experimenting with something called <strong>MapReduce</strong>. This was the first step towards parallel computing, where we could split big data tasks across multiple machines and process them simultaneously. Imagine trying to analyze billions of data points on user search behavior—MapReduce allowed us to do that at scale.</p>
+        <p>Now, let’s fast-forward to the 2010s. By this time, we were in the midst of a machine learning renaissance. Google wasn’t just a search engine anymore. We had Gmail, Google Maps, YouTube, and Google Photos—each one generating massive amounts of data. And we had to figure out how to not just process it, but use it to make better predictions and build smarter products.</p>
+        <p>I remember the early days of Google Translate—I was there. It was a challenge, and it was exciting. Statistical machine translation didn’t work as well as we hoped. Languages don’t work in predictable ways, and simply matching words from one language to another wasn’t enough. So we turned to neural networks—this was the beginning of deep learning, the algorithm that would change everything.</p>
+        <p>The breakthrough moment came when we began applying deep learning to Google Photos. It was using computer vision to understand the context of images. You could search for “beach” and instantly get all the photos you took during summer vacations, even though you never labeled them. This was made possible by algorithms like <strong>Convolutional Neural Networks (CNNs)</strong>, which are designed to work on image data.</p>
+        <p>Training these models wasn’t a walk in the park. Deep learning models are notoriously computationally expensive. It took months of fine-tuning, sometimes hundreds of GPUs, and at times, we even had to build custom chips (yes, TPUs—Tensor Processing Units) just to speed up training. The real magic of Google wasn’t just that we had access to all this data; it was that we built tools and algorithms that allowed us to make sense of it, fast.</p>
       </div>
       `
     },
     "story3": {
       "content": `
-      <div style="font-family: 'Georgia', serif; line-height: 1.6; max-width: 800px; margin: 40px auto;">
+      <div style="font-family: 'Georgia', serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px;">
         <h2 style="text-align:center; margin-bottom: 20px;">OPEN AI</h2>
-        <!-- Story 3 content here -->
+        <h3>How GPT-3 Became a Revolutionary Language Model</h3>
+        <p>In 2020, when GPT-3 was launched, it wasn’t just another language model—it was a leap forward in conversational AI. We trained GPT-3 with billions of parameters, allowing it to generate text that felt almost indistinguishable from human speech. The real breakthrough came when GPT-3 could handle nuanced conversations, understand context, and even produce creative content like poetry and code. But what really set it apart was its few-shot learning ability, allowing it to understand tasks with minimal input.</p>
+        <h3 style="margin-top: 40px;">DALL·E and the Power of AI-Driven Art</h3>
+        <p>When DALL·E was first unveiled, we knew it was going to change how we approached creativity. The challenge wasn’t just generating images, but creating new visual concepts based on text descriptions. Using a unique architecture, DALL·E could transform abstract text into vivid images, showing the world how AI could assist in artistic expression. From surrealist interpretations to simple designs, DALL·E opened a new door for artists, designers, and storytellers.</p>
+        <h3 style="margin-top: 40px;">OpenAI Codex—Empowering Developers with AI</h3>
+        <p>In 2021, OpenAI Codex became a game-changer for developers. Powered by the same GPT-3 technology, Codex could understand both human language and programming languages, turning natural language commands into code. The ability for Codex to generate Python, JavaScript, and even SQL with ease was a turning point in software development. Developers could now spend more time focusing on problem-solving and less on syntax, making programming accessible to a wider range of people.</p>
+        <h3 style="margin-top: 40px;">CLIP—Bridging the Gap Between Vision and Language</h3>
+        <p>CLIP (Contrastive Language-Image Pretraining) revolutionized how AI understood images and text together. Rather than being trained separately, CLIP was designed to understand both text and visual data simultaneously, making it one of the first truly multimodal models. The magic was in its ability to match images with textual descriptions, making it possible to search for images with natural language and generate captions for visuals. CLIP is now at the heart of many creative and practical applications, from content moderation to visual search engines.</p>
+        <h3 style="margin-top: 40px;">The Dilemma of Bias and Fairness in AI</h3>
+        <p>While we built cutting-edge models, we were also acutely aware of the ethical challenges posed by AI. OpenAI dedicated significant resources to addressing bias in our models. By constantly iterating on our algorithms and refining the training data, we sought to reduce harmful bias and promote fairness in every product we released. For us, AI wasn’t just about building better models; it was about building responsible models.</p>
+        <h3 style="margin-top: 40px;">GPT-4—The Next Generation of AI Understanding</h3>
+        <p>GPT-4 was more than just a larger model; it was a fundamentally more capable one. With a better grasp of subtle nuances, GPT-4’s ability to understand complex instructions, reason logically, and generate human-like responses made it a tool that pushed boundaries in fields like healthcare, law, and content creation. What was truly impressive was how GPT-4 managed to take even the most sophisticated queries and provide responses that were grounded in factual accuracy and context.</p>
       </div>
       `
     }
   };
 
   if (storyData[storyId]) {
-    // Load the story's HTML content
+    // Set the story HTML content
     storyContent.innerHTML = storyData[storyId].content;
     
-    // Reset the body background
+    // Reset body background
     document.body.style.backgroundImage = "";
     document.body.style.backgroundColor = "#f0f0f0";
     
-    // Determine the correct background image URL
+    // Select the proper background image URL based on the story ID
     let bgUrl = "";
     if (storyId === "story1") {
       bgUrl = "https://raw.githubusercontent.com/bolleddu15/pbblog/main/a.jpg";
@@ -458,32 +506,33 @@ function loadStory(storyId) {
       bgUrl = "https://raw.githubusercontent.com/bolleddu15/pbblog/main/o.jpg";
     }
     
-    // Set the background image with a white overlay at 75% opacity
+    // Apply the background image with a white overlay at 90% opacity,
+    // making the image very lightly visible behind the content.
     storyContent.style.background = `
-      linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+      linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
       url('${bgUrl}')
     `;
     storyContent.style.backgroundSize = "cover";
     storyContent.style.backgroundPosition = "center";
     storyContent.style.backgroundRepeat = "no-repeat";
     
-    // Additional container styling
+    // Additional styling for the content container
     storyContent.style.padding = "20px";
     storyContent.style.borderRadius = "10px";
     storyContent.style.color = "black";
-    storyContent.style.minHeight = "500px"; // Ensures the background image is visible even if content is short
+    storyContent.style.minHeight = "500px"; // Ensures the background is visible even if content is short
   } else {
     storyContent.innerHTML = "<p>Story not found.</p>";
   }
   
+  // (Optional) Update active tab or other UI elements
   setActiveTab("tab_story");
 }
 
-// Call loadStory on page load so that a story (and its background image) is visible when the page is refreshed
+// Load a default story (for example, "story1") when the page is loaded so that the background image is visible on refresh.
 window.addEventListener('DOMContentLoaded', () => {
-  loadStory('story1'); // Or whichever story should be the default
+  loadStory('story1');
 });
-
 
   // Listen for clicks on main navigation links
   document.querySelectorAll(".tab-link").forEach(link => {
