@@ -19,23 +19,9 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      
-      /* Background Image Settings */
-      background: url('https://example.com/your-background-image.jpg') no-repeat center center fixed;
-      background-size: cover;
+      /* Use a plain white background for pages other than home */
+      background: white;
       position: relative;
-    }
-    
-    /* Overlay for a slight (10%) white transparent effect */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(255, 255, 255, 0.1); /* 10% white overlay */
-      z-index: -1;
     }
     
     main {
@@ -64,8 +50,8 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      flex-wrap: nowrap;  /* Keep the navigation in one line */
-      overflow-x: auto;   /* Allow horizontal scrolling on small viewports */
+      flex-wrap: nowrap;
+      overflow-x: auto;
     }
     nav ul li {
       margin: 0 8px;
@@ -88,7 +74,7 @@
       align-items: center;
       gap: 20px;
       padding: 20px;
-      flex-wrap: nowrap; /* Maintain horizontal layout on all devices */
+      flex-wrap: nowrap;
       justify-content: center;
     }
     #home-section img {
@@ -103,6 +89,26 @@
     }
     #home-section h1 {
       margin-top: 0;
+    }
+    
+    /* Home Section Background Image (applied only on the home tab) */
+    #tab_1 {
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+    }
+    #tab_1::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://raw.githubusercontent.com/bolleddu15/pbblog/main/Screenshot%20(42).png') no-repeat center center;
+      background-size: cover;
+      /* Decreased opacity for a more subtle effect */
+      opacity: 0.5;
+      z-index: -1;
     }
     
     /* List styling for Projects, Publications, and Stories */
@@ -142,7 +148,6 @@
       max-width: 100%;
       height: auto;
       margin-bottom: 15px;
-      opacity: 0.75; /* 75% opacity added here */
     }
     .thought-section p {
       font-size: 18px;
@@ -187,7 +192,7 @@
 
   <main>
     <!-- Home Section -->
-    <section class="tabs__tab active" id="tab_1" style="position: relative;">
+    <section class="tabs__tab active" id="tab_1">
       <div style="position: fixed; top: 10px; right: 10px; font-size: small; font-style: italic; font-weight: bold; z-index: 9999;">
         🚧 Website is updating everyday 🚧
       </div>
@@ -310,8 +315,8 @@
 
   <!-- Footer -->
   <div class="footer">
-    <a href="https://www.linkedin.com/in/pradeep-pb-bolleddu-4745991b2/" target="_blank" aria-label="LinkedIn">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+    <a href="https://www.linkedin.com/in/pradeep-pb-bolleddu-4745991b2/" target="_blank" aria-label="Linkedin">
+       <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
     </a>
     <a href="https://drive.google.com/drive/u/0/folders/1ewEaWEa7U8c3zIGViDykpwPl-1hnQ1Jz" target="_blank" aria-label="Resume">
       <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Resume" />
