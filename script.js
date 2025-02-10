@@ -409,6 +409,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setActiveTab("tab_publication");
   }
 
+  // data science stories 
 function loadStory(storyId) {
   const storyData = {
     "story1": {
@@ -486,13 +487,34 @@ function loadStory(storyId) {
   };
 
   if (storyData[storyId]) {
+    // Set the inner HTML for the story content
     storyContent.innerHTML = storyData[storyId].content;
-    // Reset body background
+    
+    // Reset the overall page background
     document.body.style.backgroundImage = "";
     document.body.style.backgroundColor = "#f0f0f0";
-    // Remove any background image from the story container and apply a plain background color
-    storyContent.style.backgroundImage = "";
-    storyContent.style.backgroundColor = "#ffffff";
+
+    // Choose the appropriate background image URL for each story
+    let bgImageUrl = "";
+    if (storyId === "story1") {
+      bgImageUrl = "https://raw.githubusercontent.com/bolleddu15/pbblog/main/a.jpg";
+    } else if (storyId === "story2") {
+      bgImageUrl = "https://raw.githubusercontent.com/bolleddu15/pbblog/main/g.png";
+    } else if (storyId === "story3") {
+      bgImageUrl = "https://raw.githubusercontent.com/bolleddu15/pbblog/main/o.jpg";
+    }
+    
+    // Apply the background image to the story container with a white overlay
+    // The linear-gradient creates a white layer with 75% opacity over the image,
+    // making the image appear lightly visible.
+    storyContent.style.backgroundImage = `linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url('${bgImageUrl}')`;
+    storyContent.style.backgroundSize = "cover";
+    storyContent.style.backgroundRepeat = "no-repeat";
+    storyContent.style.backgroundPosition = "center";
+    // Remove any solid background color so the image shows through
+    storyContent.style.backgroundColor = "transparent";
+    
+    // Other styling for the story container
     storyContent.style.padding = "20px";
     storyContent.style.borderRadius = "10px";
     storyContent.style.color = "black";
@@ -501,6 +523,7 @@ function loadStory(storyId) {
   }
   setActiveTab("tab_story");
 }
+
 
   // Listen for clicks on main navigation links
   document.querySelectorAll(".tab-link").forEach(link => {
