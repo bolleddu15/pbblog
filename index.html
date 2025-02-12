@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  bolleddu.pradeep01 [at] gmail[.] com 
+  <!-- bolleddu.pradeep01 [at] gmail[.] com -->
   <title>Home | Pradeep Bolleddu</title>
   <link rel="stylesheet" href="style.css" />
   <!-- Google Font for Thought Section -->
@@ -115,7 +115,6 @@
       bottom: 0;
       background: url('https://raw.githubusercontent.com/bolleddu15/pbblog/main/Screenshot%20(42).png') no-repeat center center;
       background-size: cover;
-      opacity: 1; /* Fully visible background image */
       /* Make the image less visible (about 25% visible, 75% transparent) */
       opacity: 0.25;
       z-index: -1;
@@ -148,15 +147,16 @@
       font-size: 18px;
     }
 
-    /* Thought Section styling */
+    /* Thought Section styling (Updated as requested) */
     .thought-section {
       text-align: center;
-      margin: 40px 0;
-      padding: 20px;
+      margin: 20px 0;  /* reduced margin */
+      padding: 0;      /* removed padding to eliminate the boxed effect */
+      background: none; /* ensure no background is set */
     }
     .thought-section p {
       font-family: 'Lobster', cursive;
-      font-size: 2.5em;
+      font-size: 1.8em; /* decreased font-size from 2.5em */
       font-weight: bold;
       color: #333;
       text-transform: uppercase;
