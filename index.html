@@ -17,21 +17,25 @@
       height: 100%;
     }
 
-    /* Removed flex container and min-height to prevent extra white space above footer */
+    /* Flex container for full height with extra white space above footer */
     body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
       background: white;
       position: relative;
     }
 
-    /* Removed flex: 1 so main takes its natural height */
     main {
+      flex: 1;
       padding-top: 60px; /* Padding to avoid content hiding behind fixed nav */
     }
 
-    /* General Tabs styling – removed padding to eliminate the boxed look */
+    /* General Tabs styling */
     .tabs__tab {
       display: none;
       width: 100%;
+      padding: 20px;
       box-sizing: border-box;
       overflow-y: auto;
     }
@@ -55,7 +59,7 @@
       margin: 0;
       flex-wrap: nowrap;
       overflow-x: auto;
-      background: transparent; /* No extra box styling */
+      background: transparent;
     }
     nav ul li {
       margin: 0 8px;
@@ -100,6 +104,7 @@
       position: relative;
       z-index: 0;
       overflow: hidden;
+      min-height: 100vh;  /* Ensures the home page (including extra space) is filled */
     }
     #tab_1::before {
       content: "";
@@ -110,8 +115,7 @@
       bottom: 0;
       background: url('https://raw.githubusercontent.com/bolleddu15/pbblog/main/Screenshot%20(42).png') no-repeat center center;
       background-size: cover;
-      /* Make the image less visible (about 25% visible, 75% transparent) */
-      opacity: 0.25;
+      opacity: 0.25; /* 25% visible */
       z-index: -1;
     }
 
@@ -142,11 +146,11 @@
       font-size: 18px;
     }
 
-    /* Thought Section styling (Updated as requested) */
+    /* Thought Section styling */
     .thought-section {
       text-align: center;
       margin: 20px 0;
-      padding: 0; /* removed padding to eliminate the boxed effect */
+      padding: 0;
       background: none;
     }
     .thought-section p {
@@ -158,7 +162,7 @@
       margin: 0;
     }
 
-    /* Footer styling – no extra space between body and footer */
+    /* Footer styling */
     .footer {
       display: flex;
       justify-content: center;
