@@ -443,7 +443,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </ul>
         </div>
       `,
-        "background": "url('https://raw.githubusercontent.com/bolleddu15/pradeepb-blog/main/apple%20image.jpg')"
+        "background": "url('')"
       },
       "story2": {
         "content": `
@@ -462,7 +462,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>The complexity of the data that powers products like Google Ads and Google Cloud is mind-boggling. As the world moved to the cloud, Google had to make sure its machine learning models were scalable and efficient. This led to the creation of tools like <strong>TensorFlow</strong> and <strong>Kubernetes</strong>, which revolutionized how models were deployed in production. TensorFlow allowed us to build models, and Kubernetes let us manage them at scale. It wasn’t just about writing a model anymore—it was about operationalizing machine learning in real-world applications.</p>
         </div>
       `,
-        "background": "url('https://raw.githubusercontent.com/bolleddu15/pradeepb-blog/main/googl.png')"
+        "background": "url('')"
       },
       "story3": {
         "content": `
@@ -482,7 +482,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>GPT-4 was more than just a larger model; it was a fundamentally more capable one. With a better grasp of subtle nuances, GPT-4’s ability to understand complex instructions, reason logically, and generate human-like responses made it a tool that pushed boundaries in fields like healthcare, law, and content creation. What was truly impressive was how GPT-4 managed to take even the most sophisticated queries and provide responses that were grounded in factual accuracy and context.</p>
         </div>
       `,
-        "background": "url('https://raw.githubusercontent.com/bolleddu15/pradeepb-blog/main/open%20ai.png')"
+        "background": "url('')"
       }
     };
     if (storyData[storyId]) {
