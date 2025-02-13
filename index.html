@@ -17,26 +17,21 @@
       height: 100%;
     }
 
-    /* Set up a flex container to push the footer to the bottom */
+    /* Removed flex container and min-height to prevent extra white space above footer */
     body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      /* Use a plain white background for pages other than home */
       background: white;
       position: relative;
     }
 
+    /* Removed flex: 1 so main takes its natural height */
     main {
-      flex: 1;
       padding-top: 60px; /* Padding to avoid content hiding behind fixed nav */
     }
 
-    /* General Tabs styling */
+    /* General Tabs styling – removed padding to eliminate the boxed look */
     .tabs__tab {
       display: none;
       width: 100%;
-      padding: 20px;
       box-sizing: border-box;
       overflow-y: auto;
     }
@@ -150,13 +145,13 @@
     /* Thought Section styling (Updated as requested) */
     .thought-section {
       text-align: center;
-      margin: 20px 0;  /* reduced margin */
-      padding: 0;      /* removed padding to eliminate the boxed effect */
-      background: none; /* ensure no background is set */
+      margin: 20px 0;
+      padding: 0; /* removed padding to eliminate the boxed effect */
+      background: none;
     }
     .thought-section p {
       font-family: 'Lobster', cursive;
-      font-size: 1.8em; /* decreased font-size from 2.5em */
+      font-size: 1.8em;
       font-weight: bold;
       color: #333;
       text-transform: uppercase;
