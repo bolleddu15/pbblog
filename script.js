@@ -192,6 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
     projectContent.innerHTML = projectData[projectId] || "<p>No project found.</p>";
     setActiveTab("tab_project");
   }
+  
   // Function to load publication details
   function loadPublication(publicationId) {
     const publicationData = {
@@ -403,7 +404,7 @@ document.addEventListener("DOMContentLoaded", () => {
     publicationContent.innerHTML = publicationData[publicationId] || "<p>Publication not found.</p>";
     setActiveTab("tab_publication");
   }
-  // Function to load Data Science Story details with background images
+// Function to load Data Science Story details with background images
   function loadStory(storyId) {
     const storyData = {
       "story1": {
@@ -434,8 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <li><strong>Neural Image Signal Processing (NISP):</strong> By merging multiple frames using advanced deep learning techniques, NISP adjusts exposure and balances colors in real time. This process transforms a simple click into a meticulously crafted masterpiece.</li>
             <li><strong>Clustering Algorithms:</strong> Techniques like k-means help segment images, identify patterns, and isolate features, ensuring that every photo you take is as crisp and vibrant as the memory it captures.</li>
           </ul>
-          <h3 style="margin-top: 40px;">The Ethical Core—Data Privacy and Trust</h3>
-          <p>Amid the whirlwind of innovation, one principle remained unwavering: privacy. At Apple, data was treated not as a commodity, but as a trust to be safeguarded with cutting-edge encryption and ethical algorithms:</p>
+          <h3 style="margin-top: 40px;">The Ethical Core—Data Privacy and Trust</h3>... <p>Amid the whirlwind of innovation, one principle remained unwavering: privacy. At Apple, data was treated not as a commodity, but as a trust to be safeguarded with cutting-edge encryption and ethical algorithms:</p>
           <ul style="margin: 20px 0; padding-left: 20px;">
             <li><strong>On-Device Machine Learning:</strong> By processing data locally, our models ensured that your personal information stayed secure on your device, never venturing into the cloud.</li>
             <li><strong>Anonymization Techniques:</strong> Before any data was used for training, it was rigorously anonymized. This ensured that while our algorithms learned from patterns, they never compromised individual privacy.</li>
@@ -456,8 +456,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>Now, let’s fast-forward to the 2010s. By this time, we were in the midst of a machine learning renaissance. Google wasn’t just a search engine anymore. We had Gmail, Google Maps, YouTube, and Google Photos—each one generating massive amounts of data. And we had to figure out how to not just process it, but use it to make better predictions and build smarter products.</p>
           <p>I remember the early days of Google Translate—I was there. It was a challenge, and it was exciting. Statistical machine translation didn’t work as well as we hoped. Languages don’t work in predictable ways, and simply matching words from one language to another wasn’t enough. So we turned to neural networks—this was the beginning of deep learning, the algorithm that would change everything.</p>
           <p>The breakthrough moment came when we began applying deep learning to Google Photos. It was using computer vision to understand the context of images. You could search for “beach” and instantly get all the photos you took during summer vacations, even though you never labeled them. This was made possible by algorithms like <strong>Convolutional Neural Networks (CNNs)</strong>, which are designed to work on image data.</p>
-          <p>Training these models wasn’t a walk in the park. Deep learning models are notoriously computationally expensive. It took months of fine-tuning, sometimes hundreds of GPUs, and at times, we even had to build custom chips (yes, TPUs—Tensor Processing Units) just to speed up training. The real magic of Google wasn’t just that we had access to all this data; it was that we built tools and algorithms that allowed us to make sense of it, fast.</p>
-          <p><strong>Google Assistant</strong> was another product where data science played a pivotal role. The goal wasn’t just to make a voice assistant that responded to commands but one that could actually understand you, learn from your preferences, and predict what you needed before you asked. The algorithm that powered this was a combination of natural language processing (NLP) and reinforcement learning, where the more you interacted with Assistant, the better it got at predicting your next question, action, or task. There was a lot of trial and error in the early stages, especially with voice recognition—think about how many accents and dialects people have. But with each failure, we learned something new, and with each iteration, Google Assistant became smarter.</p>
+          <p>Training these models wasn’t a walk in the park. Deep learning models are notoriously computationally expensive. It took months of fine-tuning, sometimes hundreds of GPUs, and at times, we even had to build custom chips (yes, TPUs—Tensor Processing Units) just to speed up training. The real magic of Google wasn’t just that we had access to all this data; it was that we built tools and algorithms that allowed us to make sense of it, fast.</p>... <p><strong>Google Assistant</strong> was another product where data science played a pivotal role. The goal wasn’t just to make a voice assistant that responded to commands but one that could actually understand you, learn from your preferences, and predict what you needed before you asked. The algorithm that powered this was a combination of natural language processing (NLP) and reinforcement learning, where the more you interacted with Assistant, the better it got at predicting your next question, action, or task. There was a lot of trial and error in the early stages, especially with voice recognition—think about how many accents and dialects people have. But with each failure, we learned something new, and with each iteration, Google Assistant became smarter.</p>
           <p>In the last few years, we've seen a massive shift. Algorithms have gone from being a tool to shaping our products. Take <strong>Google Maps</strong>, for example. When we first launched it, we simply had maps, but now, it predicts traffic, suggests alternate routes, and even tells you the best time to leave for your destination. It can even predict your arrival time based on real-time data, including historical patterns.</p>
           <p>The complexity of the data that powers products like Google Ads and Google Cloud is mind-boggling. As the world moved to the cloud, Google had to make sure its machine learning models were scalable and efficient. This led to the creation of tools like <strong>TensorFlow</strong> and <strong>Kubernetes</strong>, which revolutionized how models were deployed in production. TensorFlow allowed us to build models, and Kubernetes let us manage them at scale. It wasn’t just about writing a model anymore—it was about operationalizing machine learning in real-world applications.</p>
         </div>
@@ -489,7 +488,7 @@ document.addEventListener("DOMContentLoaded", () => {
       storyContent.innerHTML = storyData[storyId].content;
       // Reset body background
       document.body.style.backgroundImage = "";
-      document.body.style.backgroundColor = "#f0f0f0";
+      document.body.style.backgroundColor = "#ffffff"; // Changed to white
       // Apply background to the story container
       storyContent.style.backgroundImage = storyData[storyId].background;
       storyContent.style.backgroundSize = "cover";
@@ -503,6 +502,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     setActiveTab("tab_story");
   }
+
   // Listen for clicks on main navigation links
   document.querySelectorAll(".tab-link").forEach(link => {
     link.addEventListener("click", event => {
