@@ -404,7 +404,7 @@ document.addEventListener("DOMContentLoaded", () => {
     publicationContent.innerHTML = publicationData[publicationId] || "<p>Publication not found.</p>";
     setActiveTab("tab_publication");
   }
-// Function to load Data Science Story details with background images
+  // Function to load Data Science Story details with background images
 function loadStory(storyId) {
     const storyData = {
         "story1": {
@@ -443,7 +443,7 @@ function loadStory(storyId) {
                     <li><strong>Differential Privacy:</strong> This statistical technique allowed us to analyze large datasets while obscuring the details of any individual entry, balancing the need for data insights with the sanctity of personal information.</li>
                 </ul>
             </div>`,
-            "background": "url('https://github.com/bolleddu15/pbblog/blob/main/a.jpg?raw=true') no-repeat center center fixed"
+            "background": "url('')"
         },
         "story2": {
             "content": `
@@ -461,7 +461,7 @@ function loadStory(storyId) {
                 <p>In the last few years, we've seen a massive shift. Algorithms have gone from being a tool to shaping our products. Take <strong>Google Maps</strong>, for example. When we first launched it, we simply had maps, but now, it predicts traffic, suggests alternate routes, and even tells you the best time to leave for your destination. It can even predict your arrival time based on real-time data, including historical patterns.</p>
                 <p>The complexity of the data that powers products like Google Ads and Google Cloud is mind-boggling. As the world moved to the cloud, Google had to make sure its machine learning models were scalable and efficient. This led to the creation of tools like <strong>TensorFlow</strong> and <strong>Kubernetes</strong>, which revolutionized how models were deployed in production. TensorFlow allowed us to build models, and Kubernetes let us manage them at scale. It wasn’t just about writing a model anymore—it was about operationalizing machine learning in real-world applications.</p>
             </div>`,
-            "background": "url('https://github.com/bolleddu15/pbblog/blob/main/g.png?raw=true') no-repeat center center fixed"
+            "background": "url('')"
         },
         "story3": {
             "content": `
@@ -480,21 +480,9 @@ function loadStory(storyId) {
                 <h3 style="margin-top: 40px;">GPT-4—The Next Generation of AI Understanding</h3>
                 <p>GPT-4 was more than just a larger model; it was a fundamentally more capable one. With a better grasp of subtle nuances, GPT-4’s ability to understand complex instructions, reason logically, and generate human-like responses made it a tool that pushed boundaries in fields like healthcare, law, and content creation. What was truly impressive was how GPT-4 managed to take even the most sophisticated queries and provide responses that were grounded in factual accuracy and context.</p>
             </div>`,
-            "background": "url('https://github.com/bolleddu15/pbblog/blob/main/o.jpg?raw=true') no-repeat center center fixed"
+            "background": "url('')"
         }
     };
-
-    // Add CSS to make the background image less visible and less transparent
-    const storyContainer = document.getElementById(storyId);
-    if (storyContainer) {
-        storyContainer.style.backgroundSize = "cover";
-        storyContainer.style.backgroundAttachment = "fixed";
-        storyContainer.style.opacity = "0.8"; // Less transparent
-        storyContainer.style.filter = "brightness(70%)"; // Makes the image darker, less visible
-        storyContainer.innerHTML = storyData[storyId].content;
-    }
-}
-
     if (storyData[storyId]) {
         storyContent.innerHTML = storyData[storyId].content;
         // Set white background with black text
