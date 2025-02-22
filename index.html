@@ -60,6 +60,7 @@
       flex-wrap: nowrap;
       overflow-x: auto;
       background: transparent;
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
     nav ul li {
       margin: 0 8px;
@@ -184,6 +185,31 @@
     @keyframes fadeIn {
       0% { opacity: 0; }
       100% { opacity: 1; }
+    }
+
+    /* Mobile Responsive Adjustments */
+    @media (max-width: 768px) {
+      /* Stack the home section vertically */
+      #home-section {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+      }
+      /* Slightly reduce image size on mobile */
+      #home-section img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+      }
+      /* Ensure text takes full width */
+      #home-section .welcome-text {
+        max-width: 100%;
+      }
+      /* Adjust nav link sizing for a neat line layout */
+      nav ul li a {
+        font-size: 16px;
+        padding: 6px 8px;
+      }
     }
   </style>
 </head>
