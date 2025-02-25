@@ -265,6 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <p class="project-description">
     In the era of big data, the Hadoop ecosystem has emerged as a cornerstone for processing and storing vast amounts of information. However, the distributed nature of Hadoop also introduces significant security challenges. This paper provides an in-depth overview of data security mechanisms in Hadoop, focusing on authentication, encryption, and access control. Key security algorithms such as Kerberos for authentication and encryption algorithms like RSA and AES for data protection are discussed alongside their mathematical formulations. The impact of these security measures on ensuring data integrity and privacy in distributed systems is also examined.
   </p>
+  <img src="https://github.com/bolleddu15/pbblog/blob/main/pub%202.png" alt="Project Image 1" style="max-width: 100%; height: auto;">
   <h3>1. Introduction</h3>
   <p>
     Hadoop is a widely adopted framework for distributed storage and processing of large datasets. Given the sensitivity of data managed in Hadoop Distributed File System (HDFS) and MapReduce computations, robust security measures are essential. The need for stringent security protocols is driven by the increasing number of cyber threats targeting big data infrastructures. This work outlines the key components of Hadoop security and provides a detailed analysis of the algorithms and protocols used to secure data within the ecosystem.
@@ -281,6 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <p><strong>Technical Keywords:</strong><br>
     Kerberos, Ticket Granting Ticket (TGT), Mutual Authentication, Key Distribution Center (KDC).
   </p>
+  <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/pub2.png" alt="Project Image 2" style="max-width: 100%; height: auto;">
   <h4>2.2 Encryption Techniques</h4>
   <p><strong>Need:</strong><br>
     Encryption ensures that data remains confidential and secure both at rest and in transit, protecting sensitive information from unauthorized access.
