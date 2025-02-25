@@ -331,7 +331,8 @@ document.addEventListener("DOMContentLoaded", () => {
     Convolutional Neural Networks (CNNs) for vision.<br>
     Recurrent Neural Networks (RNNs) or Transformers for language.<br>
     Graph Neural Networks (GNNs) for capturing relationships in robotic action planning.
-  </p>
+  </p> 
+    <img src="https://github.com/bolleddu15/pbblog/blob/main/pub3.jpg" alt="Project Image 1" style="max-width: 100%; height: auto;">
   <h4>2.2 Symbolic Reasoning Modules</h4>
   <p><strong>Need:</strong><br>
     Symbolic reasoning provides explicit, interpretable logic for decision-making and planning.
