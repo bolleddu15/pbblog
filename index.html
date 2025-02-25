@@ -100,25 +100,44 @@
       margin-top: 0;
     }
 
-    /* Home Section Background Image (applied only on the home tab) */
-    #tab_1 {
-      position: relative;
-      z-index: 0;
-      overflow: hidden;
-      min-height: 100vh;  /* Ensures the home page (including extra space) is filled */
-    }
-    #tab_1::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('https://github.com/bolleddu15/pbblog/blob/main/beach%20bg%20image.jpg') no-repeat center center;
-      background-size: cover;
-      opacity: 0.25; /* 25% visible for a soft, melting effect */
-      z-index: -1;
-    }
+#tab_1 {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+#tab_1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://raw.githubusercontent.com/bolleddu15/pbblog/main/Screenshot%20(42).png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.1; /* Reduced opacity for a very subtle background */
+  z-index: -1;
+}
+#tab_2 {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+#tab_2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://raw.githubusercontent.com/bolleddu15/pbblog/main/beach%20bg%20image.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.1; /* Reduced opacity for a very subtle background */
+  z-index: -1;
+}
 
     /* List styling for Projects, Publications, and Stories */
     #projects-list,
