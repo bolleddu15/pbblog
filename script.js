@@ -201,6 +201,8 @@ document.addEventListener("DOMContentLoaded", () => {
   <p class="project-description">
     The analysis and comparative study of these clustering techniques contribute to the development of more robust, scalable, and interpretable clustering algorithms. By addressing common challenges such as high dimensionality and noise, the work paves the way for improved performance in numerous real-world applications, thereby influencing subsequent research and practical implementations in data mining and pattern recognition.
   </p>
+  <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/pub%201.png" alt="Project Image" style="max-width: 100%; height: auto;">
+
   <h3>Algorithms and Methodologies</h3>
   <h4>2.1 K-Means Clustering</h4>
   <p><strong>Need:</strong><br>
@@ -370,7 +372,9 @@ document.addEventListener("DOMContentLoaded", () => {
   <p>
     Generative models have traditionally been static, requiring retraining when applied to new tasks. The need for self-sustaining systems—capable of autonomous adaptation and cross-domain learning—is increasingly recognized as essential for the next generation of AI. This publication addresses this gap by proposing a framework that leverages meta-learning to facilitate rapid adaptation and knowledge fusion across diverse domains.
   </p>
-  <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/pub%204.png" alt="Project Image 4" style="max-width: 100%; height: auto;">
+  
+   <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/pub%204.png" alt="Project Image 4" style="max-width: 100%; height: auto;">
+ 
   <h3>2. Methodologies and Algorithms</h3>
   <h4>2.1 Generative Adversarial Networks (GANs)</h4>
   <p><strong>Need:</strong><br>
@@ -389,7 +393,8 @@ document.addEventListener("DOMContentLoaded", () => {
   <p>
     where <em>θ</em> and <em>ϕ</em> denote the decoder and encoder parameters, respectively, and <em>KL</em> is the Kullback-Leibler divergence.
   </p>
-  <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/pub4.png" alt="Project Image 4" style="max-width: 100%; height: auto;">
+  
+    <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/pub4.png" alt="Project Image 4" style="max-width: 100%; height: auto;">
   <h4>2.3 Model-Agnostic Meta-Learning (MAML)</h4>
   <p><strong>Need:</strong><br>
     Meta-learning frameworks such as MAML allow the model to quickly adapt to new tasks with minimal data, which is vital for autonomous operation.
