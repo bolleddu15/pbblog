@@ -5,22 +5,22 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Body styling with a white background */
+/* Body styling with a dark black background */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: white; /* Changed to a plain white background */
-  color: #333;
+  background: #000; /* Dark black background */
+  color: #eee; /* Light text for readability */
   margin: 0;
   padding: 0;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle inset shadow for depth */
 }
 
 /* Header with animated text shadow */
 h1 {
   text-align: center;
-  color: #4a90e2;
+  color: #EE82EE; /* Light violet color */
   margin-top: 20px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -32,31 +32,31 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: none; /* Removed box shadow */
-  border: none; /* Ensure no borders */
+  box-shadow: none;
+  border: none;
 }
 
 nav a {
-  color: #333;
+  color: #EE82EE; /* Light violet for navigation links */
   text-decoration: none;
   margin: 0 20px;
   font-weight: bold;
   font-size: 1.1em;
   transition: color 0.3s ease, transform 0.3s ease;
-  outline: none;  /* Removes the outline when clicked */
-  -webkit-tap-highlight-color: transparent; /* Removes the highlight on mobile devices */
-  border: none; /* Ensure no border on tabs */
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  border: none;
 }
 
 nav a:focus, nav a:active {
-  outline: none !important; /* Ensures no outline on focus */
-  box-shadow: none !important; /* Removed focus box shadow */
-  border: none !important; /* Removed border on focus */
-  background-color: transparent !important; /* Ensures no background color */
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background-color: transparent !important;
 }
 
 nav a:hover {
-  color: #4a90e2;
+  color: #fff; /* Change to white on hover for emphasis */
   transform: scale(1.1);
 }
 
@@ -69,9 +69,9 @@ nav a:hover {
 }
 
 .card {
-  background: white;
+  background: #1a1a1a; /* Dark card background */
   border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px rgba(238, 130, 238, 0.2); /* Violet tinted shadow */
   margin: 20px;
   padding: 20px;
   width: 300px;
@@ -80,19 +80,19 @@ nav a:hover {
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 20px rgba(238, 130, 238, 0.4);
 }
 
 /* Responsive typography */
 h2 {
   font-size: clamp(1.5rem, 2.5vw, 2rem);
-  color: #333;
+  color: #EE82EE; /* Light violet for subheadings */
 }
 
 /* Footer with gradient and hover effects */
 footer {
-  background: linear-gradient(135deg, #333, #444);
-  color: white;
+  background: linear-gradient(135deg, #000, #1a001a); /* Dark gradient with a hint of purple */
+  color: #fff;
   text-align: center;
   padding: 15px;
   position: fixed;
@@ -102,7 +102,7 @@ footer {
 }
 
 footer a {
-  color: #4a90e2;
+  color: #EE82EE; /* Light violet for footer links */
   text-decoration: none;
   transition: color 0.3s ease;
 }
