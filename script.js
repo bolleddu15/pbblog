@@ -314,8 +314,8 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>`,
       "pub3": `<div style="text-align: center;">
   <h2>Neuro-Symbolic Large Action Models: A Unified Theoretical Framework for Generalizable AI Across Vision, Language, and Robotics</h2>
-  <img src="https://github.com/bolleddu15/pbblog/blob/main/pub%203.jpg" alt="Project Image 1" style="max-width: 100%; height: auto;">
-  <p class="project-description">
+    <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/pub%203.jpg" alt="Project Image 1" style="max-width: 100%; height: auto;">
+   <p class="project-description">
     The integration of neural networks with symbolic reasoning has the potential to create AI systems that are both powerful and interpretable. This paper presents a unified theoretical framework for neuro-symbolic large action models that generalize across multiple modalities, including vision, language, and robotics. The framework synergizes deep learning for feature extraction with symbolic reasoning for high-level decision making. Detailed mathematical formulations—such as a unified loss function and attention mechanisms—are provided to support the framework’s design. This approach addresses the limitations of purely statistical models, thereby enhancing generalizability and interpretability in complex, multi-modal environments.
   </p>
   <h3>1. Introduction</h3>
