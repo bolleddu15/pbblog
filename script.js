@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <p><strong>Multimodal Analysis:</strong> The integration of multiple data sources—such as audio, visual, and textual inputs—to create a comprehensive understanding of complex communications.</p>
             <p><strong>Financial Earnings Calls:</strong> Periodic teleconferences where publicly-traded companies discuss their financial performance, answer analyst queries, and provide strategic guidance.</p>
             <p><strong>Bias (in AI and Data Analysis):</strong> Systematic errors or prejudices in data processing and algorithmic interpretation that can lead to skewed results.</p>
+           <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/p1.png" alt="Project Image 1" style="max-width: 100%; height: auto;">
             <h3><b>Algorithm</b></h3>
             <p>A set of rules or instructions used to process data and make predictions or classifications.</p>
             <h3><b>Problem Statement</b></h3>
@@ -92,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <li><strong>Frequency (F):</strong> How often the customer makes a purchase.</li>
               <li><strong>Monetary (M):</strong> How much the customer spends.</li>
             </ul>
+            <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/p2img.jpg" alt="Project Image 2" style="max-width: 100%; height: auto;">
             <h3><b>Algorithmic Approach</b></h3>
             <ul>
               <li><strong>Data Collection:</strong> Gather historical transaction data.</li>
@@ -159,6 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <li><b>Named Entity Recognition (NER) & Entity Linking:</b> Identifies and links medical terms.</li>
               <li><b>Prompt Engineering & Vector Indexing:</b> Optimizes query responses by retrieving context from Neo4j.</li>
             </ul>
+            <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/p3.jpg" alt="Project Image 3" style="max-width: 100%; height: auto;">
             <h3><b>Reasons for Choosing These Approaches:</b></h3>
             <ul>
               <li>Knowledge graphs ensure structured medical reasoning.</li>
