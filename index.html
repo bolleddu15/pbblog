@@ -291,6 +291,21 @@
       <section class="thought-section">
         <p>YOU BECOME WHAT YOU BELIEVE TODAY! ITS A DECISION THAT YOU DECIDE</p>
       </section>
+      <!-- Footer only for Home -->
+      <div class="footer" id="home-footer">
+        <a href="https://www.linkedin.com/in/pradeep-pb-bolleddu-4745991b2/" target="_blank" aria-label="LinkedIn">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+        </a>
+        <a href="https://drive.google.com/drive/u/0/folders/1ewEaWEa7U8c3zIGViDykpwPl-1hnQ1Jz" target="_blank" aria-label="Resume">
+          <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Resume" />
+        </a>
+        <a href="https://github.com/bolleddu15" target="_blank" aria-label="GitHub">
+           <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="40" height="40" />
+        </a>
+        <a href="mailto:bolleddu.pradeep01@gmail.com" aria-label="Email">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+        </a>
+      </div>
     </section>
 
     <!-- Projects Section -->
@@ -390,22 +405,31 @@
   </div>
 </section>
 
-  <!-- Footer -->
-  <div class="footer">
-    <a href="https://www.linkedin.com/in/pradeep-pb-bolleddu-4745991b2/" target="_blank" aria-label="LinkedIn">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
-    </a>
-    <a href="https://drive.google.com/drive/u/0/folders/1ewEaWEa7U8c3zIGViDykpwPl-1hnQ1Jz" target="_blank" aria-label="Resume">
-      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Resume" />
-    </a>
-    <a href="https://github.com/bolleddu15" target="_blank" aria-label="GitHub">
-       <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="40" height="40" />
-    </a>
-    <a href="mailto:bolleddu.pradeep01@gmail.com" aria-label="Email">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
-    </a>
-  </div>
-
+  <!-- Footer is defined only inside Home Section -->
   <script src="script.js"></script>
+  <script>
+    // Simple tab navigation and footer display control for Home only
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabs = document.querySelectorAll('.tab-link');
+      const sections = document.querySelectorAll('.tabs__tab');
+      const homeFooter = document.getElementById('home-footer');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetTab = this.getAttribute('data-tab');
+          sections.forEach(section => section.classList.remove('active'));
+          document.getElementById(targetTab).classList.add('active');
+          
+          // Show footer only if Home is active
+          if (targetTab === 'tab_1') {
+            homeFooter.style.display = 'flex';
+          } else {
+            homeFooter.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
