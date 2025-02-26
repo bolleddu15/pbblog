@@ -175,6 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "project4": `
             <h2><b>Federated Learning for Multi-Class Radiology Image Analysis</b></h2>
             <p><strong>Problem Statement:</strong> Automating multi-class radiology image analysis across hospitals faces issues like inconsistent labeling, data silos, and privacy concerns. Traditional CNN-based models require centralized data, posing privacy risks and model bias. This project leverages Federated Learning (FL) to train CNN models without sharing patient data across hospitals.</p>
+           <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/p4%20img.jpg" alt="Project Image 4-1" style="max-width: 100%; height: auto;">
             <h3><b>Algorithms & Architectures Used:</b></h3>
             <ul>
               <li><b>Convolutional Neural Networks (CNNs – ResNet, EfficientNet):</b> Extracts features from multi-panel radiology scans (e.g., MRI, CT, X-ray).</li>
@@ -183,6 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <li><b>Attention-Based Transformers (Swin Transformer, ViTs):</b> Enhances CNN performance by capturing long-range dependencies.</li>
               <li><b>Multi-View Image Fusion:</b> Integrates multiple scan views to enhance classification accuracy.</li>
             </ul>
+            <img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/p4.png" alt="Project Image 4-2" style="max-width: 100%; height: auto;">
             <h3><b>Reasons for Choosing These Approaches:</b></h3>
             <ul>
               <li>Federated Learning preserves patient privacy while enabling cross-hospital collaboration.</li>
