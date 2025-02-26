@@ -4,6 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectContent = document.getElementById("project-content");
   const publicationContent = document.getElementById("publication-content");
   const storyContent = document.getElementById("story-content");
+  
+  window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  loader.classList.remove('active');
+  setTimeout(() => loader.remove(), 400);
+});
+
+  
   // Function to remove active class and set the active tab
   function setActiveTab(tabId) {
     tabContents.forEach(tab => tab.classList.remove("active"));
