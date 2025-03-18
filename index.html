@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <link rel="stylesheet" href="styles.css?v=3.0">
   <title>Home | Pradeep Bolleddu</title>
-  <!-- Google Font for Thought Section -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /* Reset default spacing and prevent horizontal scrolling */
     html, body {
@@ -29,9 +30,13 @@
       box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
     }
     
+    /* Main container with fixed height for smooth scrolling */
     main {
       flex: 1;
       padding-top: 60px; /* Padding to avoid content hiding behind fixed nav */
+      overflow-y: auto;
+      scroll-behavior: smooth;
+      height: calc(100vh - 60px);
     }
     
     /* Navigation styling */
@@ -44,6 +49,7 @@
       background-color: transparent;
       padding: 15px;
       text-align: center;
+      font-family: 'Montserrat', sans-serif;
     }
     nav ul {
       display: flex;
@@ -61,18 +67,25 @@
     }
     nav ul li a {
       text-decoration: none;
-      font-size: 18px;
-      color: #EE82EE; /* Light violet navigation links */
+      font-size: 20px;
+      font-weight: 700;
+      color: #FFD700; /* New gold color for navigation links */
       padding: 8px 12px;
       transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s;
       white-space: nowrap;
     }
-    nav ul li a.active {
-      border-bottom: 2px solid #EE82EE;
-    }
     nav ul li a:hover {
-      color: #fff;
+      color: #FFA500;
       transform: scale(1.1);
+      border-bottom: 2px solid #FFA500;
+    }
+    nav ul li a:active,
+    nav ul li a:focus {
+      border-bottom: 2px solid #FFA500;
+      outline: none;
+    }
+    nav ul li a.active {
+      border-bottom: 2px solid #FFA500;
     }
     
     /* Home section styling – side by side image and text */
@@ -222,9 +235,13 @@
     .footer a:hover {
       color: #fff;
     }
-    .footer img {
+    /* Updated footer logo style so they have a non-black (white) background */
+    .footer a img {
       width: 30px;
       height: auto;
+      background: #fff;
+      padding: 5px;
+      border-radius: 5px;
     }
     
     /* Fade-in animation for elements */
@@ -297,7 +314,7 @@
           <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Resume" />
         </a>
         <a href="https://github.com/bolleddu15" target="_blank" aria-label="GitHub">
-           <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="40" height="40" />
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="40" height="40" />
         </a>
         <a href="mailto:bolleddu.pradeep01@gmail.com" aria-label="Email">
           <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
