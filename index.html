@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <link rel="stylesheet" href="styles.css?v=3.0">
   <title>Home | Pradeep Bolleddu</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset default spacing and prevent horizontal scrolling */
     html, body {
       margin: 0;
       padding: 0;
@@ -17,423 +15,185 @@
       height: 100%;
       scroll-behavior: smooth;
     }
-    
-    /* Body styling with dark theme */
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #000; /* Dark black background */
-      color: #eee; /* Light text for readability */
+      background: #fff; /* White background */
+      color: #333; /* Dark text for readability */
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      position: relative;
-      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
     }
-    
-    /* Main container with fixed height for smooth scrolling */
+
     main {
       flex: 1;
-      padding-top: 60px; /* Padding to avoid content hiding behind fixed nav */
+      padding-top: 60px;
       overflow-y: auto;
-      scroll-behavior: smooth;
       height: calc(100vh - 60px);
     }
-    
-    /* Navigation styling */
+
     nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      background-color: transparent;
+      background-color: #fff; /* White background for tabs */
       padding: 15px;
       text-align: center;
       font-family: 'Montserrat', sans-serif;
+      transition: top 0.3s ease-in-out; /* Smooth hide/show */
     }
+
     nav ul {
       display: flex;
       justify-content: center;
       list-style: none;
       padding: 0;
       margin: 0;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      background: transparent;
-      -webkit-overflow-scrolling: touch;
     }
-    nav ul li {
-      margin: 0 8px;
-    }
+
     nav ul li a {
       text-decoration: none;
       font-size: 20px;
       font-weight: 700;
-      color: #FFD700; /* New gold color for navigation links */
+      color: #333; /* Dark color for links */
       padding: 8px 12px;
-      transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s;
-      white-space: nowrap;
     }
-    nav ul li a:hover {
-      color: #FFA500;
-      transform: scale(1.1);
-      border-bottom: 2px solid #FFA500;
+
+    nav ul li a:hover, nav ul li a.active {
+      color: #000;
+      border-bottom: 2px solid #000;
     }
-    nav ul li a:active,
-    nav ul li a:focus {
-      border-bottom: 2px solid #FFA500;
-      outline: none;
-    }
-    nav ul li a.active {
-      border-bottom: 2px solid #FFA500;
-    }
-    
-    /* Home section styling – side by side image and text */
+
     #home-section {
       display: flex;
       align-items: center;
       gap: 20px;
       padding: 20px;
-      flex-wrap: nowrap;
       justify-content: center;
     }
+
     #home-section img {
-      width: 180px;
-      height: 180px;
+      width: 150px; /* Smaller profile image */
+      height: 150px;
       object-fit: cover;
       border-radius: 50%;
-      border: 3px solid #fff;
     }
-    #home-section .welcome-text {
-      max-width: 600px;
-    }
-    /* Ensure Home section heading sits nicely */
-    #home-section h1 {
-      margin-top: 0;
-    }
-    
-    /* Global h1 styling with animation and violet accent */
+
     h1 {
       text-align: center;
-      color: #EE82EE;
-      margin-top: 20px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-      animation: fadeIn 2s ease-in-out;
+      color: #000; /* Black heading */
     }
-    
-    /* Tabs styling */
+
     .tabs__tab {
       display: none;
-      width: 100%;
-      padding: 20px;
-      box-sizing: border-box;
-      overflow-y: auto;
     }
+
     .tabs__tab.active {
       display: block;
     }
-    
-    /* Background images for tabs with dark overlay */
-    #tab_1, #tab_2, #tab_3 {
-      position: relative;
-      z-index: 0;
-      overflow: hidden;
-      min-height: 100vh;
-    }
-    #tab_1::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('https://raw.githubusercontent.com/bolleddu15/pbblog/main/beach%20bg%20image.jpg') no-repeat center center;
-      background-size: cover;
-      opacity: 0.5;
-      z-index: -1;
-    }
-    #tab_2::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('') no-repeat center center; /* add if you want*/
-      background-size: cover;
-      opacity: 0.5;
-      z-index: -1;
-    }
-    #tab_3::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('') no-repeat center center;  /* add if you want*/
-      background-size: cover;
-      opacity: 0.5;
-      z-index: -1;
-    }
-    
-    /* List styling for Projects, Publications, and Stories */
-    #projects-list,
-    #publications-list,
-    #stories-list {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-    }
-    #projects-list li,
-    #publications-list li,
-    #stories-list li {
-      margin-bottom: 15px;
-    }
-    .project-link,
-    .publication-link,
-    .story-link {
-      font-size: 24px;
-      color: inherit;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    #project-content p,
-    #publication-content p {
-      font-family: 'Georgia', serif;
-      font-size: 18px;
-    }
-    
-    /* Thought Section styling with Lobster font and violet color */
-    .thought-section {
-      text-align: center;
-      margin: 20px 0;
-      padding: 0;
-      background: none;
-    }
+
     .thought-section p {
       font-family: 'Lobster', cursive;
       font-size: 1.5em;
-      font-weight: bold;
-      color: #EE82EE;
-      text-transform: uppercase;
-      margin: 0;
+      color: #000; /* Black text */
     }
-    
-    /* Footer styling with dark gradient and violet accents, positioned at bottom center */
+
     .footer {
-      background: linear-gradient(135deg, #000, #1a001a);
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      position: fixed;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 0.9em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
+      background-color:#fff; /* White footer */
+      color:#333; 
+      text-align:center; 
+      padding-bottom:10px; 
+      position:absolute; 
+      bottom:-50px; 
+      left:50%; 
+      transform:translateX(-50%);
     }
-    .footer a {
-      color: #EE82EE;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .footer a:hover {
-      color: #fff;
-    }
-    /* Updated footer logo style so they have a non-black (white) background */
+
     .footer a img {
-      width: 30px;
-      height: auto;
-      background: #fff;
-      padding: 5px;
-      border-radius: 5px;
-    }
-    
-    /* Fade-in animation for elements */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    /* Mobile Responsive Adjustments */
-    @media (max-width: 768px) {
-      #home-section {
-        flex-direction: column;
-        padding: 10px;
-        text-align: center;
-      }
-      #home-section img {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 20px;
-      }
-      #home-section .welcome-text {
-        max-width: 100%;
-      }
-      nav ul li a {
-        font-size: 16px;
-        padding: 6px 8px;
-      }
-    }
-  </style>
+     width:auto; 
+     height:auto; 
+     max-width:20px; /* Smaller logos */
+     background:none; /* Removed black bg */
+     padding:none; 
+     border-radius:none
+   }
+
+   @media (max-width :768px){
+     nav ul li a{
+       font-size :16px
+     }
+   }
+ </style>
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li><a href="#/" class="tab-link" data-tab="tab_1">Home</a></li>
-      <li><a href="#/projects" class="tab-link" data-tab="tab_2">Projects</a></li>
-      <li><a href="#/publications" class="tab-link" data-tab="tab_3">Publications</a></li>
-      <li><a href="#/stories" class="tab-link" data-tab="tab_4">Data Science Stories</a></li>
-    </ul>
-  </nav>
+<nav id="navbar">
+<ul>
+<li><a href="#/" class="tab-link active" data-tab="tab_1">Home</a></li>
+<li><a href="#/projects" class="tab-link" data-tab="tab_2">Projects</a></li>
+<li><a href="#/publications" class="tab-link" data-tab="tab_3">Publications</a></li>
+<li><a href="#/stories" class="tab-link" data-tab="tab_4">Data Science Stories</a></li>
+</ul>
+</nav>
 
-  <main>
-    <!-- Home Section -->
-    <section class="tabs__tab active" id="tab_1">
-      <div style="position: fixed; top: 10px; right: 10px; font-size: small; font-style: italic; font-weight: bold; z-index: 9999;">
-        🚧 Website is updating everyday 🚧
-      </div>
-      <div id="home-section">
-        <div class="welcome-text">
-          <h1>Welcome</h1>
-          <p>
-            Welcome to My Portfolio <br />
-            "IDK! What to put here? Hi! I'm Pradeep Bolleddu! A Master’s graduate in Data Science and AI. I’m passionate about exploring the intersection of Big Data and AI to solve real-world problems.
-            This space is where I share my thoughts, insights, and stories I've learned along the way."
-          </p>
-          <p style="font-style: italic; opacity: 0; animation: fadeIn 2s forwards 1s;">
-            With a Master's degree in Data Science and AI! From building models to solving real-world problems, I've honed my skills in AI, machine learning, and big data analytics—not just to analyze data.
-          </p>
-        </div>
-      </div>
-      <!-- Thought Section (Visible only on Home) -->
-      <section class="thought-section">
-        <p>YOU BECOME WHAT YOU BELIEVE TODAY! ITS A DECISION THAT YOU DECIDE</p>
-      </section>
-      <!-- Footer only for Home -->
-      <div class="footer" id="home-footer">
-        <a href="https://www.linkedin.com/in/pradeep-pb-bolleddu-4745991b2/" target="_blank" aria-label="LinkedIn">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
-        </a>
-        <a href="https://drive.google.com/drive/u/0/folders/1ewEaWEa7U8c3zIGViDykpwPl-1hnQ1Jz" target="_blank" aria-label="Resume">
-          <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Resume" />
-        </a>
-        <a href="https://github.com/bolleddu15" target="_blank" aria-label="GitHub">
-          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="40" height="40" />
-        </a>
-        <a href="mailto:bolleddu.pradeep01@gmail.com" aria-label="Email">
-          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
-        </a>
-      </div>
-    </section>
+<main>
+<section class="tabs__tab active" id="tab_1">
+<div id="home-section">
+<img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/beach%20bg%20image.jpg" alt="Profile Image"/>
+<div class="welcome-text">
+<h1>Welcome</h1>
+<p>Welcome to My Portfolio<br>"IDK! What to put here? Hi! I'm Pradeep Bolleddu! A Master’s graduate in Data Science and AI. I’m passionate about exploring the intersection of Big Data and AI to solve real-world problems."</p>
+<p style="font-style :italic;">With a Master's degree in Data Science and AI! From building models to solving real-world problems, I've honed my skills in AI, machine learning, and big data analytics—not just to analyze data.</p>
+</div>
+</div>
 
-    <!-- Projects Section -->
-    <section class="tabs__tab" id="tab_2">
-      <h1>Projects</h1>
-      <ul id="projects-list">
-        <li>
-          <a href="#/projects/predictive-maintenance" class="project-link" data-project="project1">
-            Investigation of Bias in the Multimodal Analysis of Financial Earnings Calls.
-          </a>
-        </li>
-        <li>
-          <a href="#/projects/customer-segmentation" class="project-link" data-project="project2">
-            Customer/ Technographic Segmentation Models with RFM & Behavioral Analysis for Marketing Optimization.
-          </a>
-        </li>
-        <li>
-          <a href="#/projects/academic-chatbot" class="project-link" data-project="project3">
-            LangChain-Neo4j Architecture for Healthcare Chatbots with RAG systems and NLP.
-          </a>
-        </li>
-        <li>
-          <a href="#/projects/healthcare-classification" class="project-link" data-project="project4">
-            Biomedical Image Analysis with Multi-Panel Classification Standards, [CNN] Federated Learning Deployment in Radiology.
-          </a>
-        </li>
-      </ul>
-    </section>
+<section class="thought-section">
+<p>YOU BECOME WHAT YOU BELIEVE TODAY! ITS A DECISION THAT YOU DECIDE</p>
+</section>
 
-    <!-- Project Details Section -->
-    <section class="tabs__tab" id="tab_project">
-      <div id="project-content">
-        <!-- Project details will be loaded here dynamically -->
-      </div>
-    </section>
+<div class="footer" id="home-footer">
+<a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"/></a>
+<a href="#"><img src="https://cdn-icons-png.flaticon.com/512/942/942748.png"/></a>
+<a href="#"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"/></a>
+<a href="#"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"/></a>
+</div>
 
-    <!-- Publications Section -->
-    <section class="tabs__tab" id="tab_3">
-      <h1>Publications</h1>
-      <ul id="publications-list">
-        <li>
-          <a href="#/publications/An%20Analysis%20of%20Clustering%20Techniques" class="publication-link" data-publication="pub1">
-            An Analysis of Clustering Techniques.
-          </a>
-        </li>
-        <li>
-          <a href="#/publications/Hadoop:%20An%20Overview%20of%20Data%20Security" class="publication-link" data-publication="pub2">
-            Hadoop: An Overview of Data Security.
-          </a>
-        </li>
-        <li>
-          <a href="#/publications/Neuro-Symbolic%20Large%20Action%20Models:%20A%20Unified%20Theoretical%20Framework%20for%20Generalizable%20AI%20Across%20Vision,%20Language,%20and%20Robotics" class="publication-link" data-publication="pub3">
-            Neuro-Symbolic Large Action Models: A Unified Theoretical Framework for Generalizable AI Across Vision, Language, and Robotics.
-          </a>
-        </li>
-        <li>
-          <a href="#/publications/Self-Sustaining%20Artificial%20Generative%20Systems:%20Exploring%20Autonomous%20Meta-Learning%20and%20Cross-Domain%20Knowledge%20Fusion" class="publication-link" data-publication="pub4">
-            Self-Sustaining Artificial Generative Systems: Exploring Autonomous Meta-Learning and Cross-Domain Knowledge Fusion.
-          </a>
-        </li>
-      </ul>
-    </section>
+</section>
 
-    <!-- Publication Details Section -->
-    <section class="tabs__tab" id="tab_publication">
-      <div id="publication-content"></div>
-    </section>
+<section class="tabs__tab" id="tab_2"><h1>Projects</h1></section>
+<section class="tabs__tab" id="tab_3"><h1>Publications</h1></section>
+<section class="tabs__tab" id="tab_4"><h1>Data Science Stories</h1></section>
 
-    <!-- Data Science Stories Section -->
-    <section class="tabs__tab" id="tab_4">
-      <h1>Data Science Stories</h1>
-      <ul id="stories-list">
-        <li>
-          <a href="#/stories/story1" class="story-link" data-story="story1">
-            The Secret Data Behind Apple’s Innovation
-          </a>
-        </li>
-        <li>
-          <a href="#/stories/story2" class="story-link" data-story="story2">
-            The Hidden World of AI at Google
-          </a>
-        </li>
-        <li>
-          <a href="#/stories/story3" class="story-link" data-story="story3">
-            How OpenAI is Paving the Way for a New Age of Intelligence?
-          </a>
-        </li>
-      </ul>
-    </section>
-  </main>
-  <script src="script.js"></script>
-  <script>
-    // Simple tab navigation and footer display control for Home only
-    document.addEventListener('DOMContentLoaded', function() {
-      const tabs = document.querySelectorAll('.tab-link');
-      const sections = document.querySelectorAll('.tabs__tab');
-      const homeFooter = document.getElementById('home-footer');
-      
-      tabs.forEach(tab => {
-        tab.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetTab = this.getAttribute('data-tab');
-          sections.forEach(section => section.classList.remove('active'));
-          document.getElementById(targetTab).classList.add('active');
-          
-          // Show footer only if Home is active
-          if (targetTab === 'tab_1') {
-            homeFooter.style.display = 'flex';
-          } else {
-            homeFooter.style.display = 'none';
-          }
-        });
-      });
-    });
-  </script>
+</main>
+
+<script>
+// Tab navigation
+document.querySelectorAll('.tab-link').forEach(tab => {
+ tab.addEventListener('click', function(e) {
+   e.preventDefault();
+   document.querySelectorAll('.tabs__tab').forEach(sec => sec.classList.remove('active'));
+   document.getElementById(this.dataset.tab).classList.add('active');
+   document.querySelectorAll('.tab-link').forEach(link => link.classList.remove('active'));
+   this.classList.add('active');
+ });
+});
+
+// Hide tabs on scroll
+let prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+ let currentScrollPos = window.pageYOffset;
+
+ if (prevScrollpos > currentScrollPos) {
+   document.getElementById("navbar").style.top = "0";
+ } else {
+   document.getElementById("navbar").style.top = "-80px";
+ }
+ prevScrollpos = currentScrollPos;
+}
+</script>
+
 </body>
 </html>
