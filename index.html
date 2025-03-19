@@ -15,115 +15,66 @@
       height: 100%;
       scroll-behavior: smooth;
     }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #fff; /* White background */
-      color: #333; /* Dark text for readability */
+      color: #333;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
-
     main {
       flex: 1;
       padding-top: 60px;
       overflow-y: auto;
       height: calc(100vh - 60px);
     }
-
     nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      background-color: #fff; /* White background for tabs */
+      background-color: #fff; /* White navbar */
       padding: 15px;
       text-align: center;
       font-family: 'Montserrat', sans-serif;
-      transition: top 0.3s ease-in-out; /* Smooth hide/show */
+      transition: top 0.3s ease-in-out;
     }
-
     nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
-      margin: 0;
+      display: flex; justify-content:center; list-style:none; padding:0; margin:0;
     }
-
     nav ul li a {
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: 700;
-      color: #333; /* Dark color for links */
-      padding: 8px 12px;
+      text-decoration:none; font-size:20px; font-weight:bold; color:#333; padding:8px 12px;
     }
-
     nav ul li a:hover, nav ul li a.active {
-      color: #000;
-      border-bottom: 2px solid #000;
+      color:#000; border-bottom:2px solid #000;
     }
-
+    h1 {text-align:center;color:#000;}
+    .tabs__tab {display:none;padding-bottom:80px;}
+    .tabs__tab.active {display:block;}
+    
     #home-section {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 20px;
-      justify-content: center;
+      display:flex; align-items:center; gap:20px; padding:20px; justify-content:center;
     }
-
     #home-section img {
-      width: 150px; /* Smaller profile image */
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    h1 {
-      text-align: center;
-      color: #000; /* Black heading */
-    }
-
-    .tabs__tab {
-      display: none;
-    }
-
-    .tabs__tab.active {
-      display: block;
+      width:150px;height:150px;border-radius:50%;object-fit:cover;border:none;
     }
 
     .thought-section p {
-      font-family: 'Lobster', cursive;
-      font-size: 1.5em;
-      color: #000; /* Black text */
+      font-family:'Lobster', cursive;font-size:1.5em;color:#000;text-align:center;margin-top:-10px
     }
 
     .footer {
-      background-color:#fff; /* White footer */
-      color:#333; 
-      text-align:center; 
-      padding-bottom:10px; 
-      position:absolute; 
-      bottom:-50px; 
-      left:50%; 
-      transform:translateX(-50%);
+      background-color:#fff;color:#333;text-align:center;padding-bottom:10px;position:absolute;bottom:-50px;left:50%;transform:translateX(-50%);
     }
-
+    
     .footer a img {
-     width:auto; 
-     height:auto; 
-     max-width:20px; /* Smaller logos */
-     background:none; /* Removed black bg */
-     padding:none; 
-     border-radius:none
+     width:auto;height:auto;max-width:20px;background:none;padding:none;border-radius:none
    }
 
    @media (max-width :768px){
-     nav ul li a{
-       font-size :16px
-     }
+     nav ul li a{font-size :16px}
    }
  </style>
 </head>
@@ -139,16 +90,15 @@
 </nav>
 
 <main>
+
 <section class="tabs__tab active" id="tab_1">
 <div id="home-section">
-<img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/beach%20bg%20image.jpg" alt="Profile Image"/>
+<img src="https://raw.githubusercontent.com/bolleddu15/pbblog/main/beach%20bg%20image.jpg"/>
 <div class="welcome-text">
 <h1>Welcome</h1>
 <p>Welcome to My Portfolio<br>"IDK! What to put here? Hi! I'm Pradeep Bolleddu! A Master’s graduate in Data Science and AI. I’m passionate about exploring the intersection of Big Data and AI to solve real-world problems."</p>
 <p style="font-style :italic;">With a Master's degree in Data Science and AI! From building models to solving real-world problems, I've honed my skills in AI, machine learning, and big data analytics—not just to analyze data.</p>
-</div>
-</div>
-
+</div></div>
 <section class="thought-section">
 <p>YOU BECOME WHAT YOU BELIEVE TODAY! ITS A DECISION THAT YOU DECIDE</p>
 </section>
@@ -162,9 +112,34 @@
 
 </section>
 
-<section class="tabs__tab" id="tab_2"><h1>Projects</h1></section>
-<section class="tabs__tab" id="tab_3"><h1>Publications</h1></section>
-<section class="tabs__tab" id="tab_4"><h1>Data Science Stories</h1></section>
+<!-- Projects Section (original content restored) -->
+<section class="tabs__tab" id="tab_2">
+<h1>Projects</h1>
+<ul id="projects-list">
+<li><a class="project-link">Investigation of Bias in Multimodal Analysis of Financial Earnings Calls.</a></li>
+<li><a class="project-link">Customer Segmentation Models with RFM & Behavioral Analysis for Marketing Optimization.</a></li>
+<li><a class="project-link">LangChain-Neo4j Architecture for Healthcare Chatbots with RAG systems and NLP.</a></li>
+<li><a class="project-link">Biomedical Image Analysis with Multi-Panel Classification Standards [CNN] Federated Learning Deployment in Radiology.</a></li>
+</ul></section>
+
+<!-- Publications Section (original content restored) -->
+<section class="tabs__tab" id="tab_3">
+<h1>Publications</h1>
+<ul id="publications-list">
+<li><a>An Analysis of Clustering Techniques.</a></li>
+<li><a>Hadoop An Overview of Data Security.</a></li>
+<li><a>Neuro-Symbolic Large Action Models for Generalizable AI Across Vision, Language, Robotics.</a></li>
+<li><a>Self-Sustaining Artificial Generative Systems Autonomous Meta-Learning & Cross-Domain Knowledge Fusion.</a></li>
+</ul></section>
+
+<!-- Data Science Stories (original content restored) -->
+<section class="tabs__tab" id="tab_4">
+<h1>Data Science Stories</h1>
+<ul id="stories-list">
+<li><a>The Secret Data Behind Apple’s Innovation</a></li>
+<li><a>The Hidden World of AI at Google</a></li>
+<li><a>How OpenAI is Paving the Way for a New Age of Intelligence?</a></li>
+</ul></section>
 
 </main>
 
